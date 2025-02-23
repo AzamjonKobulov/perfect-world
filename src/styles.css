@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-[#E6EBF0] overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .product-card__box,
+  .product-card-2__box {
+    --mask-size: 16px; /* Default for <1024px */
+    --mask: radial-gradient(
+        var(--mask-size) at var(--mask-size) var(--mask-size),
+        #0000 98%,
+        #000
+      )
+      calc(-1 * var(--mask-size)) calc(-1 * var(--mask-size));
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+  }
+
+  @media (min-width: 1536px) {
+    .product-card-2__box,
+    .product-card__box {
+      --mask-size: 32px; /* Override for ≥1024px */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .product-card-2__box,
+    .product-card__box {
+      --mask-size: 24px; /* Override for ≥1024px */
+    }
+  }
+}
+
+.one {
+  width: 124px;
+}
+
+.one:after {
+  content: "";
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 215, 0, 0) 0%,
+    rgba(255, 165, 0, 1) 50%,
+    rgba(255, 215, 0, 0) 100%
+  );
+  display: block;
+}
+
+.one::before {
+  content: "";
+  @apply absolute left-1/2 top-1/2 size-1.5 -translate-y-1/2 rotate-45 border-[0.0125rem] border-active-menu bg-white shadow-custom;
+}
+
+.secondary-hover {
+  @apply transition duration-200 ease-in-out hover:shadow-custom;
+}
+
+.hover-custom {
+  @apply border border-transparent transition duration-200 ease-in-out hover:bg-brand-black-200 hover:border-active-menu hover:shadow-custom;
+}
+
+.links-hover {
+  @apply transition duration-200 ease-in-out hover:border-white;
+}
+
+.register-btn::after,
+.register-btn::before {
+  content: "";
+  @apply relative z-10 size-1.5 rotate-45 bg-active-menu;
+}
+
+.versions {
+  @apply relative w-32 md:w-36 lg:w-56 xl:w-[21.875rem];
+}
+
+.versions:after {
+  content: "";
+  background: linear-gradient(
+    to right,
+    rgba(255, 215, 0, 0) 0%,
+    rgba(255, 165, 0, 1) 50%,
+    rgba(255, 215, 0, 0) 100%
+  );
+  display: block;
+  @apply h-[0.0625rem] lg:h-0.5;
+}
+
+.versions::before {
+  content: "";
+  @apply absolute left-1/2 top-1/2 size-1 lg:size-1.5 -translate-y-1/2 rotate-45 border-[0.0125rem] border-active-menu bg-white shadow-custom;
+}
+
+.box-hero {
+  --mask: radial-gradient(18px at 18px 18px, #0000 98%, #000) -18px -18px;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.custom-card::after {
+  content: "";
+  @apply hidden xl:block absolute z-0 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-[calc(100%-14px)] h-[calc(100%-14px)] border border-active-menu;
+}
+
+.custom-card {
+  --mask: radial-gradient(
+        20px at 20px 20px,
+        #0000 calc(98% - 1px),
+        #000 calc(100% - 1px) 98%,
+        #0000
+      ) -20px -20px,
+    linear-gradient(90deg, #000 2px, transparent 0) -1px 50% /100%
+      calc(100% - 40px + 1px) repeat-x,
+    linear-gradient(#000 2px, #0000 0) 50% -1px / calc(100% - 40px + 1px) 100% repeat-y;
+}
+
+.custom-card:before {
+  content: "";
+  background: #fbe28a;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  @apply w-[calc(100%-10px)] h-[calc(100%-10px)] block xl:hidden absolute z-30 inset-0 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2;
+}
+
+/* Play Video Btn */
+.videoPlay-btn::after,
+.videoPlay-btn::before {
+  content: "";
+  @apply absolute top-1/2 size-[0.1875rem] xl:size-1 -translate-y-1/2 rotate-45 border-[0.0125rem] border-active-menu bg-white shadow-custom;
+}
+
+.videoPlay-btn::after {
+  content: "";
+  @apply absolute left-0 -translate-x-1/2;
+}
+
+.videoPlay-btn::before {
+  content: "";
+  @apply absolute right-0 translate-x-1/2;
+}
+
+/* Product */
+
+.product-card::after {
+  content: "";
+  @apply absolute z-0 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-[calc(100%-10px)] h-[calc(100%-10px)] border border-active-menu;
+}
+
+.product-card-2::after {
+  content: "";
+  @apply absolute z-0 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-[calc(100%-10px)] h-[calc(100%-10px)] border border-active-menu transition duration-300 group-hover:shadow-custom-3;
+}
+
+.border-glow::after,
+.border-glow::before {
+  content: "";
+  @apply absolute top-1/2 size-1 -translate-y-1/2 rotate-45 border-[0.0125rem] border-active-menu bg-white shadow-custom;
+}
+
+.border-glow::after {
+  content: "";
+  @apply left-0 -translate-x-1/2;
+}
+
+.border-glow::before {
+  content: "";
+  @apply right-0 translate-x-1/2;
+}
+
+.product-cost::after,
+.product-cost::before {
+  content: "";
+  @apply absolute top-1/2 size-1 -translate-y-1/2 rotate-45 border-[0.0125rem] border-active-menu bg-white shadow-custom;
+}
+
+.product-cost::after {
+  content: "";
+  @apply absolute left-0 -translate-x-1/2;
+}
+
+.product-cost::before {
+  content: "";
+  @apply absolute right-0 translate-x-1/2;
+}
+
+.shadow-custom__range {
+  box-shadow: 0px 0px 5.4px 0px #00c8ff;
+}
+
+/* About The Game */
+.about-box {
+  --mask: radial-gradient(25px at 25px 25px, #0000 98%, #000) -25px -25px;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.about-box__border {
+  --mask: radial-gradient(
+        25px at 25px 25px,
+        #0000 calc(98% - 1px),
+        #000 calc(100% - 1px) 98%,
+        #0000
+      ) -25px -25px,
+    linear-gradient(90deg, #000 2px, #0000 0) -1px 50% /100%
+      calc(100% - 50px + 1px) repeat-x,
+    linear-gradient(#000 2px, #0000 0) 50% -1px / calc(100% - 50px + 1px) 100% repeat-y;
+}
+
+.about-box__border::before {
+  content: "";
+  background: #fbe28a;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  @apply w-[calc(100%-24px)] h-[calc(100%-24px)] absolute !z-10 inset-0 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2;
+}
+
+.shadow-custom__drop {
+  box-shadow: 0px 0px 30.6px 0px #fbe28a;
+}
+
+.shadow-custom__drop::before {
+  content: "";
+  @apply absolute;
+}
+
+.shadow-custom__left::after {
+  content: "";
+  box-shadow: 0px 0px 3.4px 2px #fbe28a;
+  @apply order-first inset-0 size-1 bg-white shadow-custom rotate-45;
+}
+
+/* Default (inactive) tab styles */
+.tab-btn-media {
+  @apply bg-base-blue text-white w-full flex items-center justify-center gap-x-3 h-9 xs:h-12 xl:h-[60px] relative rounded-full px-5 xl:px-10 font-manrope font-semibold text-[0.8531rem]/[1.195rem] md:text-base xl:text-xl/[1.7075rem];
+}
+
+/* Active tab styles */
+.active-media-tab {
+  @apply bg-white text-[#4F80B1];
+}
+
+.active-media-tab::after,
+.active-media-tab::before {
+  content: "";
+  box-shadow: 0px 0px 4.1px 2px #fbe28a;
+  @apply relative z-10 size-1 xl:size-1.5 bg-white rotate-45;
+}
+
+/* image-video__product */
+.image-video__card::after {
+  content: "";
+  @apply absolute z-0 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-[calc(100%-10px)] h-[calc(100%-10px)] border border-active-menu;
+}
+
+.image-video__product {
+  --mask: radial-gradient(16px at 16px 16px, #0000 98%, #000) -16px -16px;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.image-video__card {
+  @apply transition duration-200 hover:shadow-custom;
+}
+
+.text-shadow {
+  text-shadow: 0px 4px 4px #2e659d;
+}
+
+.border-shadow {
+  @apply xl:border xl:border-active-menu;
+}
+
+.border-shadow::before {
+  content: "";
+  @apply hidden xl:block absolute z-0 top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 size-2 bg-white shadow-custom rotate-45;
+}
+
+.border-shadow::after {
+  content: "";
+  @apply hidden xl:block absolute z-0 top-1/2 right-0 -translate-y-1/2 translate-x-1/2 size-2 bg-white shadow-custom rotate-45;
+}
+
+/* Taps */
+.tap-active {
+  @apply bg-brand-black;
+}
+
+.swordsman::after,
+.swordsman::before {
+  content: "";
+  @apply size-1 bg-white shadow-custom rotate-45;
+}
+
+.text-shadow__custom {
+  text-shadow: 0px 4px 4px #00000040;
+}
+
+.box-tabs {
+  --mask: radial-gradient(18px at 18px 18px, #0000 98%, #000) -18px -18px;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.custom-card__tabs {
+  --mask: radial-gradient(
+        20px at 20px 20px,
+        #0000 calc(98% - 1px),
+        #000 calc(100% - 1px) 98%,
+        #0000
+      ) -20px -20px,
+    linear-gradient(90deg, #000 2px, transparent 0) -1px 50% /100%
+      calc(100% - 40px + 1px) repeat-x,
+    linear-gradient(#000 2px, #0000 0) 50% -1px / calc(100% - 40px + 1px) 100% repeat-y;
+}
+
+.custom-card__tabs:before {
+  content: "";
+  background: #fbe28a;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  @apply w-[calc(100%-10px)] h-[calc(100%-10px)] block xl:hidden absolute z-30 inset-0 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2;
+}
+
+.tab-button.active {
+  @apply bg-brand-black;
+}
+
+.fade-in {
+  animation: fadeIn 0.2s ease-in-out forwards, scaleIn 0.2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.login-title::after,
+.login-title::before {
+  content: "";
+  @apply absolute size-1 lg:size-[0.575rem] rotate-45 -translate-y-1/2 top-1/2 bg-white border-[0.0125rem] border-active-menu shadow-custom;
+}
+
+.login-title::after {
+  @apply left-0 -translate-x-1/2;
+}
+.login-title::before {
+  @apply right-0 translate-x-1/2;
+}
+
+/* Default gray images (gray state) */
+.product-image.gray {
+  filter: grayscale(100%);
+}
+
+.swiper-about .swiper-pagination {
+  @apply !gap-1.5 !-mb-2;
+}
+
+.swiper-about .swiper-pagination-bullet {
+  @apply !size-4 !shrink-0 !border !border-white !-rotate-45 !bg-transparent !rounded-none !ml-3;
+}
+
+.swiper-about .swiper-pagination-bullet-active {
+  @apply !bg-white !shadow-custom;
+}
+
+.swiper-about .swiper-slide {
+  opacity: 1;
+  transition: opacity 0.7s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.swiper-about .swiper-slide-hidden {
+  opacity: 0 !important; /* Hide the previous slide */
+  z-index: 2;
+}
+
+.checkbox-custom {
+  @apply inline-block relative appearance-none min-w-5 size-5 border-[3px] border-[#97ABBF] rounded bg-transparent;
+}
+
+.checkbox-custom:checked {
+  @apply border-brand-black;
+}
+
+.checkbox-custom:checked::after {
+  content: "";
+  transform: translate(-50%, -50%);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.285 6.708l-11.145 11.145-5.145-5.145 1.415-1.414 3.729 3.728 9.732-9.732z"/></svg>');
+  @apply bg-contain bg-no-repeat absolute top-1/2 left-1/2 size-3;
+}

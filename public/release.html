@@ -1,0 +1,3194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Font -->
+    <link rel="stylesheet" href="./font/font-display/stylesheet.css" />
+    <link rel="stylesheet" href="./font/font-involve/stylesheet.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Perfect World Release</title>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 overflow-x-clip">
+      <div class="bg-black/85 py-4 lg:py-[22px]">
+        <nav
+          class="flex items-center justify-between gap-x-6 max-w-base mx-auto px-3.5 lg:px-6"
+        >
+          <div class="flex items-center gap-x-[7.875rem]">
+            <a class="shrink-0" href="#">
+              <img
+                class="h-7 lg:h-11 xl:h-[68px]"
+                src="./assets/svg/logo.svg"
+                alt="logo"
+              />
+            </a>
+            <div
+              class="hidden lg:flex items-center gap-x-6 lg:gap-x-8 xl:gap-x-20 font-display lg:text-lg xl:text-2xl/[2.265rem] text-white uppercase"
+            >
+              <a
+                class="nav-link flex flex-col items-center gap-1 transition duration-300 text-active-menu"
+                href="#hero"
+              >
+                <span>Главная</span>
+                <div
+                  class="one relative opacity-0 transition-opacity duration-300"
+                ></div>
+              </a>
+              <a
+                class="nav-link flex flex-col items-center gap-1 transition duration-300"
+                href="#about"
+              >
+                <span>Об игре</span>
+                <div
+                  class="one relative opacity-0 transition-opacity duration-300"
+                ></div>
+              </a>
+              <a
+                class="nav-link flex flex-col items-center gap-1 transition duration-300"
+                href="#media"
+              >
+                <span>Медиа</span>
+                <div
+                  class="one relative opacity-0 transition-opacity duration-300"
+                ></div>
+              </a>
+            </div>
+          </div>
+          <div>
+            <!-- Button -->
+            <button
+              class="register-btn hidden lg:flex items-center justify-center gap-3 h-12 xl:h-[60px] relative rounded-full overflow-hidden bg-brand-black hover-custom px-5 xl:px-10"
+            >
+              <span
+                class="relative z-10 font-semibold uppercase xl:text-xl/[1.7075rem] text-white"
+                >центр пополнений</span
+              >
+              <img
+                class="size-full object-cover absolute left-0 top-0 z-0"
+                src="./assets/img/bg-button.png"
+                alt="bg-button"
+              />
+            </button>
+            <!-- Menu Btn -->
+            <button
+              class="menu-btn lg:hidden text-white transition duration-200 hover:text-active-menu h-8"
+            >
+              <span class="exit-icon p-2 rounded bg-[#262626] hidden">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.68934 0.93934C1.27513 0.353553 2.22487 0.353553 2.81066 0.93934L8 6.12868L13.1893 0.93934C13.7751 0.353553 14.7249 0.353553 15.3107 0.93934C15.8964 1.52513 15.8964 2.47487 15.3107 3.06066L10.1213 8.25L14.8107 12.9393C15.3964 13.5251 15.3964 14.4749 14.8107 15.0607C14.2249 15.6464 13.2751 15.6464 12.6893 15.0607L8 10.3713L3.31066 15.0607C2.72487 15.6464 1.77513 15.6464 1.18934 15.0607C0.603553 14.4749 0.603553 13.5251 1.18934 12.9393L5.87868 8.25L0.68934 3.06066C0.103553 2.47487 0.103553 1.52513 0.68934 0.93934Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7 menu-icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        class="mobile-menu absolute translate-x-full transition duration-300 w-full bg-black-200/90 lg:hidden pt-3"
+      >
+        <div
+          class="flex flex-col items-center gap-8 font-display lg:text-lg xl:text-2xl/[2.265rem] text-white uppercase pt-[2.125rem]"
+        >
+          <a
+            class="nav-link flex flex-col items-center gap-1 transition duration-300 text-active-menu"
+            href="#hero"
+          >
+            <span>Главная</span>
+            <div
+              class="one relative opacity-0 transition-opacity duration-300"
+            ></div>
+          </a>
+          <a
+            class="nav-link flex flex-col items-center gap-1 transition duration-300"
+            href="#about"
+          >
+            <span>Об игре</span>
+            <div
+              class="one relative opacity-0 transition-opacity duration-300"
+            ></div>
+          </a>
+          <a
+            class="nav-link flex flex-col items-center gap-1 transition duration-300"
+            href="#media"
+          >
+            <span>Медиа</span>
+            <div
+              class="one relative opacity-0 transition-opacity duration-300"
+            ></div>
+          </a>
+        </div>
+        <div
+          class="flex items-center justify-center gap-3 border-t border-[#3A3A3A] pt-4 px-5 pb-6 mt-8"
+        >
+          <a
+            class="transition duration-200 hover:opacity-75"
+            href="https://t.me/pwascend"
+          >
+            <img
+              class="size-10"
+              src="./assets/svg/telegram-icon.svg"
+              alt="telegram-icon"
+            />
+          </a>
+          <a
+            class="transition duration-200 hover:opacity-75"
+            href="https://vk.com/pw_ascend"
+          >
+            <img class="w-10 h-6" src="./assets/svg/w-icon.svg" alt="w-icon" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <!-- Login Modal -->
+      <div
+        class="fade-in login-modal hidden bg-black/20 fixed top-0 size-full z-[60] flex items-center justify-center overflow-auto pb-20 pt-60"
+      >
+        <div
+          class="modal-container relative max-w-[23.4375rem] md:max-w-[500px] lg:max-w-[62.6875rem] w-full px-9 translate-y-[120%] transition duration-300"
+        >
+          <!-- Modal Content -->
+          <div class="font-display text-white relative z-10">
+            <div class="flex items-end justify-center gap-0.5 mt-7 lg:mt-16">
+              <svg
+                class="h-2.5 lg:h-[1.875rem]"
+                height="100"
+                viewBox="0 0 150 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M104.403 8.6562C102.481 0.481375 92.0455 1.91153 87.8548 7.31432C85.9002 9.83916 86.2812 12.2404 88.2357 14.6063C91.6149 18.7026 96.5013 20.3799 101.487 20.0974C106.523 19.8149 111.89 18.3848 116.494 16.266C120.669 14.3415 123.75 11.6578 128.537 11.4988C132.479 11.3753 137.15 12.9643 139.602 16.4073C142.898 21.0332 143.295 27.1776 149.358 29.0668C149.905 29.2433 149.54 30.2321 149.01 29.9496C140.678 25.8004 134.367 16.9899 124.512 16.937C121.712 16.937 119.128 16.7604 116.461 17.7845C113.977 18.7379 111.774 20.1857 109.488 21.5452C105.396 23.9994 101.073 26.1358 96.286 26.0829C89.1468 25.9946 80.4174 19.3029 81.1131 10.8985C81.61 4.80714 87.1591 1.08169 92.3934 0.181219C98.0749 -0.789873 103.823 2.15871 104.651 8.62088C104.668 8.77979 104.469 8.77979 104.436 8.6562H104.403Z"
+                  fill="#FBE28A"
+                />
+                <path
+                  d="M81.8923 21.2804C69.3034 22.3398 59.1992 15.2949 47.5379 11.8343C42.8834 10.4571 36.6221 8.86807 32.0006 10.8632C29.0522 12.1345 26.2694 14.2709 23.6357 16.1248C18.9645 19.3912 12.9682 26.5949 6.70693 24.4232C0.876301 22.428 -2.12184 11.9049 1.72108 6.83761C5.38179 2.03512 15.8173 4.13621 14.9394 11.3223C14.8731 11.799 14.2437 11.746 14.1774 11.3223C13.3161 6.3962 7.27012 8.62089 5.92841 11.9932C4.66952 15.1713 6.21001 20.168 9.67194 20.1151C16.5958 20.0091 22.2277 13.2292 26.5841 8.3737C32.7957 1.45246 40.6637 1.47012 48.5649 5.76058C53.7164 8.56792 57.8741 12.876 63.1415 15.6304C69.1875 18.7909 75.2831 20.0445 81.9254 20.8037C82.1905 20.839 82.1739 21.2804 81.9089 21.298L81.8923 21.2804Z"
+                  fill="#FBE28A"
+                />
+                <path
+                  d="M50.7012 22.8695C51.1485 25.4826 49.0945 27.2306 46.792 27.1776C44.2577 27.107 41.0608 25.2531 39.835 22.8695C37.7314 18.8085 39.686 14.6946 43.7111 13.6176C47.3387 12.6465 51.9435 12.4523 55.6208 13.2292C56.3828 13.3881 56.2834 14.5004 55.5049 14.5004C50.6184 14.5534 46.5436 15.1007 44.0258 19.9739C43.0982 21.7748 42.9491 23.7699 44.7878 24.9706C46.9577 26.3831 48.9785 25.5002 49.3926 22.9224C49.5086 22.1456 50.5687 22.0396 50.7178 22.8695H50.7012Z"
+                  fill="#FBE28A"
+                />
+              </svg>
+              <img
+                class="h-8 lg:h-[6.1875rem]"
+                src="./assets/svg/ticket.svg"
+                alt="ticket"
+              />
+              <svg
+                class="h-2.5 lg:h-[1.875rem]"
+                height="100"
+                viewBox="0 0 150 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M45.5975 8.6562C47.519 0.481375 57.9545 1.91153 62.1452 7.31432C64.0998 9.83916 63.7188 12.2404 61.7643 14.6063C58.3851 18.7026 53.4987 20.3799 48.5128 20.0974C43.4773 19.8149 38.1104 18.3848 33.5055 16.266C29.3313 14.3415 26.2504 11.6578 21.4633 11.4988C17.521 11.3753 12.8499 12.9643 10.3984 16.4073C7.10207 21.0332 6.70451 27.1776 0.641983 29.0668C0.0953674 29.2433 0.459778 30.2321 0.989838 29.9496C9.32169 25.8004 15.6327 16.9899 25.4884 16.937C28.2878 16.937 30.8718 16.7604 33.5387 17.7845C36.0233 18.7379 38.2264 20.1857 40.5123 21.5452C44.6036 23.9994 48.9269 26.1358 53.714 26.0829C60.8532 25.9946 69.5826 19.3029 68.8869 10.8985C68.39 4.80714 62.8409 1.08169 57.6066 0.181219C51.9251 -0.789873 46.1772 2.15871 45.349 8.62088C45.3325 8.77979 45.5312 8.77979 45.5644 8.6562H45.5975Z"
+                  fill="#FBE28A"
+                />
+                <path
+                  d="M68.1077 21.2804C80.6966 22.3398 90.8008 15.2949 102.462 11.8343C107.117 10.4571 113.378 8.86807 117.999 10.8632C120.948 12.1345 123.731 14.2709 126.364 16.1248C131.035 19.3912 137.032 26.5949 143.293 24.4232C149.124 22.428 152.122 11.9049 148.279 6.83761C144.618 2.03512 134.183 4.13621 135.061 11.3223C135.127 11.799 135.756 11.746 135.823 11.3223C136.684 6.3962 142.73 8.62089 144.072 11.9932C145.33 15.1713 143.79 20.168 140.328 20.1151C133.404 20.0091 127.772 13.2292 123.416 8.3737C117.204 1.45246 109.336 1.47012 101.435 5.76058C96.2836 8.56792 92.1259 12.876 86.8585 15.6304C80.8125 18.7909 74.7169 20.0445 68.0746 20.8037C67.8095 20.839 67.8261 21.2804 68.0911 21.298L68.1077 21.2804Z"
+                  fill="#FBE28A"
+                />
+                <path
+                  d="M99.2988 22.8695C98.8515 25.4826 100.906 27.2306 103.208 27.1776C105.742 27.107 108.939 25.2531 110.165 22.8695C112.269 18.8085 110.314 14.6946 106.289 13.6176C102.661 12.6465 98.0565 12.4523 94.3792 13.2292C93.6172 13.3881 93.7166 14.5004 94.4951 14.5004C99.3816 14.5534 103.456 15.1007 105.974 19.9739C106.902 21.7748 107.051 23.7699 105.212 24.9706C103.042 26.3831 101.021 25.5002 100.607 22.9224C100.491 22.1456 99.4313 22.0396 99.2822 22.8695H99.2988Z"
+                  fill="#FBE28A"
+                />
+              </svg>
+            </div>
+            <div class="mt-3 lg:mt-9">
+              <div
+                class="login-title relative border border-active-menu flex items-center justify-center max-w-[9.375rem] lg:max-w-[25.125rem] w-full h-[2.8231rem] lg:h-[7.875rem] rounded-full px-5 mx-auto"
+              >
+                <h4
+                  class="text-center text-[0.9375rem] lg:text-[2.5rem] leading-[1]"
+                >
+                  Предрегистрация <br />
+                  пользователя
+                </h4>
+                <span
+                  class="absolute top-1/2 -translate-y-1/2 left-0 -translate-x-full border-t border-active-menu w-[39%] shadow-custom"
+                ></span>
+                <span
+                  class="absolute top-1/2 -translate-y-1/2 right-0 translate-x-full border-t border-active-menu w-[39%] lg:w-[36%] shadow-custom"
+                ></span>
+              </div>
+            </div>
+            <form
+              action="#"
+              id="emailForm"
+              class="max-w-[50.125rem] mx-auto mt-[3.875rem] lg:mt-[3.5625rem] pb-12 lg:pb-[5.4375rem]"
+            >
+              <p
+                class="max-w-80 lg:max-w-xl mx-auto text-center text-xl lg:text-4xl leading-[1]"
+              >
+                Введите свою почту и получите награды на релизе игры
+              </p>
+              <input
+                class="w-full border border-active-menu rounded-[0.875rem] bg-transparent outline-none text-base lg:text-[2rem] flex items-center h-[2.6875rem] lg:h-[4.125rem] px-3.5 lg:px-6 mt-11 lg:mt-[4.375rem] text-white placeholder:text-white/80"
+                type="email"
+                name="email"
+                placeholder="example@gmail.com"
+                id="emailInput"
+              />
+              <p
+                class="email-success hidden max-w-80 lg:max-w-xl mx-auto text-center text-xl lg:text-4xl leading-[1] mt-6 lg:mt-12"
+              >
+                Предрегистрация успешно пройдена!
+              </p>
+              <button
+                class="register-btn flex items-center justify-center gap-x-8 lg:gap-x-12 h-[3.9375rem] lg:h-[4.375rem] relative rounded-full overflow-hidden bg-brand-black hover-custom px-16 mt-[11.3125rem] lg:mt-[4.375rem] mx-auto"
+              >
+                <span
+                  class="relative z-10 font-manrope font-semibold uppercase text-lg lg:text-2xl text-white"
+                  >отправить</span
+                >
+                <img
+                  class="size-full object-cover absolute left-0 top-0 z-0"
+                  src="./assets/img/bg-button.png"
+                  alt="bg-button"
+                />
+              </button>
+            </form>
+          </div>
+          <!-- Exit -->
+          <button
+            class="login-exit__btn absolute z-10 right-0 lg:right-12 top-[8%] lg:top-[21%] shrink-0 bg-black-300/60 size-10 lg:size-[4.5625rem] rounded-full overflow-hidden p-[0.4375rem] secondary-hover"
+          >
+            <span
+              class="relative flex items-center justify-center size-full border border-active-menu rounded-full"
+            >
+              <svg
+                class="size-3 lg:size-6"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.5 3L27 26.5"
+                  stroke="white"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M26.5 3L3 26.5"
+                  stroke="white"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+          </button>
+          <!-- Modal BG -->
+          <img
+            class="hidden lg:block absolute z-0 inset-0 size-full"
+            src="./assets/img/login-modal.png"
+            alt=""
+          />
+          <img
+            class="block lg:hidden absolute z-0 inset-0 size-full"
+            src="./assets/img/login-modal__mobile.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- Socials -->
+      <div
+        class="w-[60px] h-[150px] fixed right-0 top-1/2 z-50 hidden lg:block bg-black/70 rounded-tl-[20px] rounded-bl-[20px] py-1 pl-1"
+      >
+        <div
+          class="h-full relative lg:flex flex-col items-center justify-center gap-6 border-t border-l border-b border-white rounded-tl-[20px] rounded-bl-[20px]"
+        >
+          <img
+            src="./assets/img/icon-tab-left.png"
+            alt="Icon"
+            class="size-4 absolute -left-2 top-1/2 -translate-y-1/2"
+          />
+
+          <a
+            class="transition duration-200 hover:opacity-75"
+            href="https://t.me/pwascend"
+            target="_blank"
+          >
+            <img
+              class="size-10"
+              src="./assets/svg/telegram-icon.svg"
+              alt="telegram-icon"
+            />
+          </a>
+          <a
+            class="transition duration-200 hover:opacity-75"
+            href="https://vk.com/pw_ascend"
+            target="_blank"
+          >
+            <img class="w-10 h-6" src="./assets/svg/w-icon.svg" alt="w-icon" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <section
+        id="hero"
+        class="2xl:min-h-screen relative z-40 bg-hero-mobile xs:bg-hero bg-top bg-cover"
+      >
+        <!-- Container -->
+        <div
+          class="relative 2xl:h-screen z-20 max-w-base mx-auto flex flex-col justify-between px-3.5 lg:px-6 pt-2.5 lg:pt-8 xl:pb-[15.625rem]"
+        >
+          <!-- Content Top -->
+          <div class="flex justify-center mx-auto">
+            <img
+              class="h-[3.3125rem] md:h-20 lg:h-28 xl:h-40"
+              src="./assets/svg/logo.svg"
+              alt="Logo"
+            />
+          </div>
+          <!-- Content Bottom -->
+          <div class="custom-card relative w-full xl:max-w-[31.25rem]">
+            <div
+              class="relative z-40 grid grid-cols-2 xs:gap-4 divide-x-[0.0313rem] divide-white xl:block py-5 xl:pt-10 xl:pb-[2.125rem] xs:px-8"
+            >
+              <!-- 1 -->
+              <div
+                class="w-full max-w-[21.875rem] grid grid-cols-2 gap-1"
+              ></div>
+            </div>
+            <div
+              class="absolute size-full inset-0 z-20 bg-black-300/70 box-hero"
+            ></div>
+          </div>
+        </div>
+        <div
+          class="size-full absolute z-[5] inset-0 bg-gradient-to-b from-[#001B36]/60 via-transparent to-[#001B36]/70"
+        ></div>
+
+        <!-- Hero Bottom BG -->
+        <img
+          class="w-full hidden xs:block absolute bottom-0 xs:translate-y-[35%] z-10"
+          src="./assets/svg/hero-bottom.svg"
+          alt=""
+        />
+
+        <!-- Hero Bottom BG -->
+        <img
+          class="w-full xs:hidden absolute -bottom-5 sm:translate-y-[35%] z-10"
+          src="./assets/svg/hero-bottom-mobile.svg"
+          alt=""
+        />
+
+        <!-- Hero Video Modal -->
+        <div
+          class="hero-vid-modal fade-in fixed inset-0 size-full z-[80] bg-black/50 hidden flex items-center justify-center overflow-auto"
+        >
+          <div class="relative max-w-[90%] max-h-[80%] aspect-video">
+            <!-- Close Button -->
+            <button
+              class="hero-vid-modal-close cursor-pointer !shrink-0 absolute -right-5 -top-16 xl:-right-20 z-20 bg-black-300/60 size-10 sm:size-16 xl:size-[73px] rounded-full overflow-hidden p-[0.4375rem] transition duration-200 ease-in-out hover:shadow-custom"
+            >
+              <div
+                class="border-glow relative flex items-center justify-center size-full border border-active-menu rounded-full"
+              >
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="size-2.5 sm:size-3.5 lg:size-7 xl:size-auto"
+                >
+                  <path
+                    d="M3.5 3L27 26.5"
+                    stroke="white"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M26.5 3L3 26.5"
+                    stroke="white"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+            </button>
+
+            <!-- Video Modal -->
+            <div class="aspect-video image-video__card hover:shadow-none">
+              <div
+                class="relative z-30 overflow-hidden aspect-video image-video__product hover:shadow-none"
+              >
+                <!-- Video Element -->
+                <video
+                  class="horo-vid size-full object-cover"
+                  src="./assets/vid/vid-7.mp4"
+                  controls
+                ></video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About The Game -->
+      <section id="about" class="relative z-30 pt-[4.5625rem] lg:pt-32">
+        <div class="relative z-10 max-w-base mx-auto lg:px-6">
+          <div class="relative about-box__border">
+            <div class="relative z-20 size-full pb-10 pt-7 lg:pt-10 2xl:pt-16">
+              <!-- Title -->
+              <div class="relative flex items-center justify-center gap-0.5">
+                <img
+                  class="h-3 md:h-5 lg:h-[30px]"
+                  src="./assets/svg/heading-line.svg"
+                  alt=""
+                />
+                <h2
+                  class="font-display font-bold text-2xl md:text-4xl lg:text-[3.125rem]/[4.375rem] text-white uppercase"
+                >
+                  об игре
+                </h2>
+                <img
+                  class="h-3 md:h-5 lg:h-[30px]"
+                  src="./assets/svg/heading-line__right.svg"
+                  alt=""
+                />
+              </div>
+
+              <!-- Slider & Content -->
+              <div class="relative">
+                <!-- Swiper -->
+                <div class="swiper swiper-about">
+                  <div
+                    class="swiper-wrapper !pt-6 md:!pt-8 2xl:!pt-12 2xl:!pb-24"
+                  >
+                    <div class="swiper-slide px-8 lg:px-10 xl:px-[4.25rem]">
+                      <div
+                        class="grid lg:grid-cols-2 gap-y-4 md:gap-y-6 gap-x-6 2xl:gap-x-11"
+                      >
+                        <div class="relative p-2">
+                          <div
+                            class="shadow-custom__drop h-64 md:h-80 lg:h-96 xl:h-[28.125rem] overflow-hidden"
+                          >
+                            <img
+                              class="size-full object-cover object-center"
+                              src="./assets/img/about-game__slider.png"
+                              alt="About Game Slider"
+                            />
+
+                            <div
+                              class="absolute z-0 flex justify-between top-0 left-0 w-full"
+                            >
+                              <span
+                                class="block size-5 border-l border-t border-active-menu"
+                              ></span>
+                              <span
+                                class="block size-5 border-r border-t border-active-menu"
+                              ></span>
+                            </div>
+                            <div
+                              class="absolute z-0 flex justify-between bottom-0 left-0 w-full"
+                            >
+                              <span
+                                class="block size-5 border-l border-b border-active-menu"
+                              ></span>
+                              <span
+                                class="block size-5 border-r border-b border-active-menu"
+                              ></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="font-manrope text-white">
+                          <h3
+                            class="font-bold text-2xl md:text-3xl lg:text-[2.5rem]/[2.1rem] text-center lg:text-left"
+                          >
+                            Очень крутой заголовок 1
+                          </h3>
+                          <p
+                            class="text-[0.9375rem]/[1.3125rem] xl:text-xl mt-4 lg:mt-5"
+                          >
+                            Присоединяйтесь к игрокам по всему миру на одном
+                            сервере. Переключайтесь между ландшафтным
+                            и портретным режимами по желанию. Последний шедевр
+                            20-летней классики IP «Perfect World» теперь
+                            официально выпущен по всему миру!
+                            <br /><br />
+                            Perfect World: Ascend предлагает по‑настоящему
+                            открытый 3D-мир с высокой степенью свободы
+                            и разнообразным игровым процессом. Выбирайте
+                            из множества интересных профессий и участвуйте
+                            в захватывающих межсерверных сражениях.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide px-8 lg:px-10 xl:px-[4.25rem]">
+                      <div
+                        class="grid lg:grid-cols-2 gap-y-4 md:gap-y-6 gap-x-6 2xl:gap-x-11"
+                      >
+                        <div class="relative p-2">
+                          <div
+                            class="shadow-custom__drop h-64 md:h-80 lg:h-96 xl:h-[28.125rem] overflow-hidden"
+                          >
+                            <img
+                              class="size-full object-cover object-center"
+                              src="./assets/img/img-slide-1.png"
+                              alt="About Game Slider"
+                            />
+
+                            <div
+                              class="absolute z-0 flex justify-between top-0 left-0 w-full"
+                            >
+                              <span
+                                class="block size-5 border-l border-t border-active-menu"
+                              ></span>
+                              <span
+                                class="block size-5 border-r border-t border-active-menu"
+                              ></span>
+                            </div>
+                            <div
+                              class="absolute z-0 flex justify-between bottom-0 left-0 w-full"
+                            >
+                              <span
+                                class="block size-5 border-l border-b border-active-menu"
+                              ></span>
+                              <span
+                                class="block size-5 border-r border-b border-active-menu"
+                              ></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="font-manrope text-white">
+                          <h3
+                            class="font-bold text-2xl md:text-3xl lg:text-[2.5rem]/[2.1rem] text-center lg:text-left"
+                          >
+                            Очень крутой заголовок 2
+                          </h3>
+                          <p
+                            class="text-[0.9375rem]/[1.3125rem] xl:text-xl mt-4 lg:mt-5"
+                          >
+                            Присоединяйтесь к игрокам по всему миру на одном
+                            сервере. Переключайтесь между ландшафтным
+                            и портретным режимами по желанию. Последний шедевр
+                            20-летней классики IP «Perfect World» теперь
+                            официально выпущен по всему миру!
+                            <br /><br />
+                            Perfect World: Ascend предлагает по‑настоящему
+                            открытый 3D-мир с высокой степенью свободы
+                            и разнообразным игровым процессом. Выбирайте
+                            из множества интересных профессий и участвуйте
+                            в захватывающих межсерверных сражениях.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide px-8 lg:px-10 xl:px-[4.25rem]">
+                      <div
+                        class="grid lg:grid-cols-2 gap-y-4 md:gap-y-6 gap-x-6 2xl:gap-x-11"
+                      >
+                        <div class="relative p-2">
+                          <div
+                            class="shadow-custom__drop h-64 md:h-80 lg:h-96 xl:h-[28.125rem] overflow-hidden"
+                          >
+                            <img
+                              class="size-full object-cover object-center"
+                              src="./assets/img/img-slide-2.png"
+                              alt="About Game Slider"
+                            />
+
+                            <div
+                              class="absolute z-0 flex justify-between top-0 left-0 w-full"
+                            >
+                              <span
+                                class="block size-5 border-l border-t border-active-menu"
+                              ></span>
+                              <span
+                                class="block size-5 border-r border-t border-active-menu"
+                              ></span>
+                            </div>
+                            <div
+                              class="absolute z-0 flex justify-between bottom-0 left-0 w-full"
+                            >
+                              <span
+                                class="block size-5 border-l border-b border-active-menu"
+                              ></span>
+                              <span
+                                class="block size-5 border-r border-b border-active-menu"
+                              ></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="font-manrope text-white">
+                          <h3
+                            class="font-bold text-2xl md:text-3xl lg:text-[2.5rem]/[2.1rem] text-center lg:text-left"
+                          >
+                            Очень крутой заголовок 3
+                          </h3>
+                          <p
+                            class="text-[0.9375rem]/[1.3125rem] xl:text-xl mt-4 lg:mt-5"
+                          >
+                            Присоединяйтесь к игрокам по всему миру на одном
+                            сервере. Переключайтесь между ландшафтным
+                            и портретным режимами по желанию. Последний шедевр
+                            20-летней классики IP «Perfect World» теперь
+                            официально выпущен по всему миру!
+                            <br /><br />
+                            Perfect World: Ascend предлагает по‑настоящему
+                            открытый 3D-мир с высокой степенью свободы
+                            и разнообразным игровым процессом. Выбирайте
+                            из множества интересных профессий и участвуйте
+                            в захватывающих межсерверных сражениях.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination hidden 2xl:block"></div>
+                </div>
+              </div>
+              <!-- Next & Prev & Pagination -->
+              <div
+                class="flex 2xl:block items-center justify-center gap-x-12 lg:gap-x-8 mt-6"
+              >
+                <!-- Prev -->
+                <div
+                  class="swiper-about-prev select-none prev cursor-pointer 2xl:absolute z-30 2xl:-translate-x-1/2 left-0 top-1/2 2xl:-translate-y-1/2 !shrink-0 bg-black-300/60 size-[3.125rem] lg:size-16 2xl:size-[5.625rem] rounded-full overflow-hidden p-[0.4375rem] transition duration-200 ease-in-out hover:shadow-custom"
+                >
+                  <div
+                    class="relative flex items-center justify-center size-full border border-active-menu rounded-full border-glow"
+                  >
+                    <img
+                      class="w-4 lg:w-5 h-5 lg:h-6 xl:w-[1.875rem] xl:h-9"
+                      src="./assets/svg/prev.svg"
+                      alt="Prev"
+                    />
+                  </div>
+                </div>
+
+                <!-- Pagination -->
+                <p
+                  class="about-images-pagination 2xl:hidden font-display font-bold text-[2rem]/[2.8rem] 2xl:text-[3.125rem]/[4.375rem] text-white"
+                ></p>
+
+                <!-- Next -->
+                <div
+                  class="swiper-about-next select-none next cursor-pointer 2xl:absolute z-30 2xl:translate-x-1/2 right-0 top-1/2 2xl:-translate-y-1/2 !shrink-0 bg-black-300/60 size-[3.125rem] lg:size-16 2xl:size-[5.625rem] rounded-full overflow-hidden p-[0.4375rem] transition duration-200 ease-in-out hover:shadow-custom"
+                >
+                  <div
+                    class="relative flex items-center justify-center size-full border border-active-menu rounded-full border-glow"
+                  >
+                    <img
+                      class="w-4 lg:w-5 h-5 sm:h-6 lg:h-8 xl:w-[1.875rem] xl:h-9 rotate-180"
+                      src="./assets/svg/prev.svg"
+                      alt="Prev"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 z-0 about-box bg-cover size-full"
+              style="background-image: url('./assets/img/about-game__bg.png')"
+            ></div>
+          </div>
+        </div>
+        <img
+          class="hidden lg:block w-full absolute bottom-0 -translate-y-1/2 z-0"
+          src="./assets/svg/lenta-classes.svg"
+          alt=""
+        />
+      </section>
+
+      <!-- Classes -->
+      <section
+        id="classes"
+        class="space-y-12 lg:space-y-24 pt-16 pb-14 lg:py-[140px]"
+      >
+        <!-- Title -->
+        <div class="relative flex items-center justify-center gap-0.5">
+          <img
+            class="h-3 md:h-5 lg:h-[30px]"
+            src="./assets/svg/heading-line.svg"
+            alt=""
+          />
+          <h2
+            class="font-display font-bold text-2xl md:text-4xl lg:text-[3.125rem]/[4.375rem] text-base-blue uppercase"
+          >
+            классы
+          </h2>
+          <img
+            class="h-3 md:h-5 lg:h-[30px]"
+            src="./assets/svg/heading-line__right.svg"
+            alt=""
+          />
+        </div>
+
+        <div class="h-[350px] md:h-[600px] xl:h-[650px] relative">
+          <!-- Image -->
+          <!-- <img
+            src="./assets/img/img-classes-name.png"
+            alt="Image"
+            class="h-12 lg:h-20 w-1/2 xs:w-[30%] 2xl:w-1/4 3xl:w-[32%] 4xl:w-[37%] absolute top-4 md:top-6 lg:top-12 z-20"
+          /> -->
+
+          <!-- BG Image -->
+          <img
+            src="./assets/img/bg-classes.png"
+            alt="Bg Image"
+            class="absolute left-0 z-10 w-1/2 size-full hidden lg:block object-fill 3xl:object-cover"
+          />
+
+          <!-- BG Image Mobile -->
+          <img
+            src="./assets/img/bg-classes-mobile.png"
+            alt="Bg Image"
+            class="absolute inset-0 size-full lg:hidden object-cover"
+          />
+
+          <!-- Background Video -->
+          <video
+            class="tab-video h-[350px] md:h-[600px] xl:h-[650px] w-2/3 absolute bottom-0 right-0 hidden lg:block object-cover object-left opacity-90"
+            autoplay
+            loop
+            muted
+            playsinline
+          >
+            <source src="./assets/vid/vid-1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          <div class="max-w-base mx-auto px-3.5">
+            <!-- Tabs -->
+            <div
+              class="hidden lg:block max-w-[392px] lg:max-w-5xl w-full h-32 absolute left-1/2 -translate-x-1/2 -bottom-16 z-20 bg-black/70 lg:rounded-full p-1.5"
+            >
+              <div
+                class="border border-active-menu relative size-full lg:rounded-full py-3.5"
+              >
+                <!-- Left Icon -->
+                <img
+                  src="./assets/img/icon-tab-left.png"
+                  alt="Icon"
+                  class="absolute -left-2.5 top-1/2 -translate-y-1/2 hidden lg:block"
+                />
+
+                <!-- Tab Buttons -->
+                <div class="w-fit h-fit relative mx-auto py-3 pl-16">
+                  <div
+                    class="absolute left-1/2 -translate-x-1/2 flex flex-col lg:flex-row justify-between lg:justify-start lg:gap-12 ml-5"
+                  >
+                    <div class="flex items-center gap-12 -ml-10 lg:ml-0">
+                      <!-- Btn 1 -->
+                      <button
+                        data-tab="tab1"
+                        data-video="./assets/vid/vid-1.mp4"
+                        class="tab-button active size-9 lg:size-[60px] grid place-content-center bg-transparent hover:bg-brand-black border-2 border-white rotate-45"
+                      >
+                        <img
+                          src="./assets/svg/tab-1.svg"
+                          alt="Icon"
+                          class="w-2/3 mx-auto lg:size-auto -rotate-45"
+                        />
+                      </button>
+                      <!-- Btn 2 -->
+                      <button
+                        data-tab="tab2"
+                        data-video="./assets/vid/vid-2.mp4"
+                        class="tab-button size-9 lg:size-[60px] grid place-content-center bg-transparent hover:bg-brand-black border-2 border-white rotate-45"
+                      >
+                        <img
+                          src="./assets/svg/tab-2.svg"
+                          alt="Icon"
+                          class="w-2/3 mx-auto lg:size-auto -rotate-45"
+                        />
+                      </button>
+                      <!-- Btn 3 -->
+                      <button
+                        data-tab="tab3"
+                        data-video="./assets/vid/vid-3.mp4"
+                        class="tab-button size-9 lg:size-[60px] grid place-content-center bg-transparent hover:bg-brand-black border-2 border-white rotate-45"
+                      >
+                        <img
+                          src="./assets/svg/tab-3.svg"
+                          alt="Icon"
+                          class="w-2/3 mx-auto lg:size-auto -rotate-45"
+                        />
+                      </button>
+                      <!-- Btn 4 -->
+                      <button
+                        data-tab="tab4"
+                        data-video="./assets/vid/vid-4.mp4"
+                        class="tab-button size-9 lg:size-[60px] grid place-content-center bg-transparent hover:bg-brand-black border-2 border-white rotate-45"
+                      >
+                        <img
+                          src="./assets/svg/tab-4.svg"
+                          alt="Icon"
+                          class="w-2/3 mx-auto lg:size-auto -rotate-45"
+                        />
+                      </button>
+                    </div>
+                    <div class="flex items-center gap-12">
+                      <!-- Btn 5 -->
+                      <button
+                        data-tab="tab5"
+                        data-video="./assets/vid/vid-5.mp4"
+                        class="tab-button size-9 lg:size-[60px] grid place-content-center bg-transparent hover:bg-brand-black border-2 border-white rotate-45"
+                      >
+                        <img
+                          src="./assets/svg/tab-5.svg"
+                          alt="Icon"
+                          class="w-2/3 mx-auto lg:size-auto -rotate-45"
+                        />
+                      </button>
+                      <!-- Btn 6 -->
+                      <button
+                        data-tab="tab6"
+                        data-video="./assets/vid/vid-6.mp4"
+                        class="tab-button size-9 lg:size-[60px] grid place-content-center bg-transparent hover:bg-brand-black border-2 border-white rotate-45"
+                      >
+                        <img
+                          src="./assets/svg/tab-6.svg"
+                          alt="Icon"
+                          class="w-2/3 mx-auto lg:size-auto -rotate-45"
+                        />
+                      </button>
+                      <!-- Btn 7 -->
+                      <button
+                        data-tab="tab7"
+                        data-video="./assets/vid/vid-7.mp4"
+                        class="tab-button size-9 lg:size-[60px] grid place-content-center bg-transparent hover:bg-brand-black border-2 border-white rotate-45"
+                      >
+                        <img
+                          src="./assets/svg/tab-7.svg"
+                          alt="Icon"
+                          class="w-2/3 mx-auto lg:size-auto -rotate-45"
+                        />
+                      </button>
+                      <!-- Btn 8 -->
+                      <button
+                        data-tab="tab8"
+                        data-video="./assets/vid/vid-8.mp4"
+                        class="tab-button size-9 lg:size-[60px] grid place-content-center bg-transparent hover:bg-brand-black border-2 border-white rotate-45"
+                      >
+                        <img
+                          src="./assets/svg/tab-8.svg"
+                          alt="Icon"
+                          class="w-2/3 mx-auto lg:size-auto -rotate-45"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right Icon -->
+                <img
+                  src="./assets/img/icon-tab-left.png"
+                  alt="Icon"
+                  class="absolute -right-2.5 top-1/2 -translate-y-1/2 hidden lg:block"
+                />
+              </div>
+            </div>
+
+            <!-- Tabs Mobile -->
+            <div
+              class="box-hero lg:hidden max-w-[392px] lg:max-w-5xl w-full h-32 absolute left-1/2 z-20 -translate-x-1/2 -bottom-24 bg-black/70 lg:rounded-full p-1.5"
+            >
+              <div
+                class="custom-card relative size-full lg:rounded-full py-3.5"
+              >
+                <!-- Left Icon -->
+                <img
+                  src="./assets/img/icon-tab-left.png"
+                  alt="Icon"
+                  class="absolute -left-2.5 top-1/2 -translate-y-1/2 hidden lg:block"
+                />
+
+                <!-- Tab Buttons -->
+                <div class="w-fit h-fit relative z-30 mx-auto py-3 pl-16">
+                  <div
+                    class="absolute left-1/2 -translate-x-1/2 flex flex-col lg:flex-row justify-between lg:justify-start lg:gap-12 ml-5"
+                  >
+                    <div class="flex items-center gap-12 -ml-10 lg:ml-0">
+                      <!-- Btn 1 -->
+                      <button
+                        data-tab="tab1"
+                        data-video="./assets/vid/vid-1.mp4"
+                        class="tab-button active size-9 lg:size-[60px] grid place-content-center bg-transparent hover:bg-brand-black border-2 border-white rotate-45"
+                      >
+                        <img
+                          src="./assets/svg/tab-1.svg"
+                          alt="Icon"
+                          class="w-2/3 mx-auto lg:size-auto -rotate-45"
+                        />
+                      </button>
+                      <!-- Btn 2 -->
+                      <button
+                        data-tab="tab2"
+                        data-video="./assets/vid/vid-2.mp4"
+                        class="tab-button size-9 lg:size-[60px] grid place-content-center bg-transparent hover:bg-brand-black border-2 border-white rotate-45"
+                      >
+                        <img
+                          src="./assets/svg/tab-2.svg"
+                          alt="Icon"
+                          class="w-2/3 mx-auto lg:size-auto -rotate-45"
+                        />
+                      </button>
+                      <!-- Btn 3 -->
+                      <button
+                        data-tab="tab3"
+                        data-video="./assets/vid/vid-3.mp4"
+                        class="tab-button size-9 lg:size-[60px] grid place-content-center bg-transparent hover:bg-brand-black border-2 border-white rotate-45"
+                      >
+                        <img
+                          src="./assets/svg/tab-3.svg"
+                          alt="Icon"
+                          class="w-2/3 mx-auto lg:size-auto -rotate-45"
+                        />
+                      </button>
+                      <!-- Btn 4 -->
+                      <button
+                        data-tab="tab4"
+                        data-video="./assets/vid/vid-4.mp4"
+                        class="tab-button size-9 lg:size-[60px] grid place-content-center bg-transparent hover:bg-brand-black border-2 border-white rotate-45"
+                      >
+                        <img
+                          src="./assets/svg/tab-4.svg"
+                          alt="Icon"
+                          class="w-2/3 mx-auto lg:size-auto -rotate-45"
+                        />
+                      </button>
+                    </div>
+                    <div class="flex items-center gap-12">
+                      <!-- Btn 5 -->
+                      <button
+                        data-tab="tab5"
+                        data-video="./assets/vid/vid-5.mp4"
+                        class="tab-button size-9 lg:size-[60px] grid place-content-center bg-transparent hover:bg-brand-black border-2 border-white rotate-45"
+                      >
+                        <img
+                          src="./assets/svg/tab-5.svg"
+                          alt="Icon"
+                          class="w-2/3 mx-auto lg:size-auto -rotate-45"
+                        />
+                      </button>
+                      <!-- Btn 6 -->
+                      <button
+                        data-tab="tab6"
+                        data-video="./assets/vid/vid-6.mp4"
+                        class="tab-button size-9 lg:size-[60px] grid place-content-center bg-transparent hover:bg-brand-black border-2 border-white rotate-45"
+                      >
+                        <img
+                          src="./assets/svg/tab-6.svg"
+                          alt="Icon"
+                          class="w-2/3 mx-auto lg:size-auto -rotate-45"
+                        />
+                      </button>
+                      <!-- Btn 7 -->
+                      <button
+                        data-tab="tab7"
+                        data-video="./assets/vid/vid-7.mp4"
+                        class="tab-button size-9 lg:size-[60px] grid place-content-center bg-transparent hover:bg-brand-black border-2 border-white rotate-45"
+                      >
+                        <img
+                          src="./assets/svg/tab-7.svg"
+                          alt="Icon"
+                          class="w-2/3 mx-auto lg:size-auto -rotate-45"
+                        />
+                      </button>
+                      <!-- Btn 8 -->
+                      <button
+                        data-tab="tab8"
+                        data-video="./assets/vid/vid-8.mp4"
+                        class="tab-button size-9 lg:size-[60px] grid place-content-center bg-transparent hover:bg-brand-black border-2 border-white rotate-45"
+                      >
+                        <img
+                          src="./assets/svg/tab-8.svg"
+                          alt="Icon"
+                          class="w-2/3 mx-auto lg:size-auto -rotate-45"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right Icon -->
+                <img
+                  src="./assets/img/icon-tab-left.png"
+                  alt="Icon"
+                  class="absolute -right-2.5 top-1/2 -translate-y-1/2 hidden lg:block"
+                />
+              </div>
+            </div>
+
+            <div class="flex items-center">
+              <!-- Tabs Contents -->
+              <div
+                class="max-w-base flex-1 z-10 flex items-center pt-[7.5%] xs:pt-[6%] sm:pt-[5%] xl:pt-[5%] 2xl:pt-[4.5%] 3xl:pt-[4%]"
+              >
+                <!-- Content 1 -->
+                <div id="tab1" class="tab-content">
+                  <!-- Title BG -->
+                  <img
+                    src="./assets/img/img-classes-name.png"
+                    alt="Image"
+                    class="h-12 lg:h-20 w-1/2 xs:w-[30%] lg:w-1/3 2xl:w-1/4 3xl:w-[32%] 4xl:w-[37%] absolute top-[4%] md:top-[4.3%] lg:top-[6%] xl:top-[7.5%] 2xl:top-[7.2%] -left-5 lg:-left-20 z-20"
+                  />
+                  <!-- info -->
+                  <div
+                    class="info-section relative opacity-0 transition-all duration-500"
+                  >
+                    <!-- Name -->
+                    <div
+                      class="relative z-20 flex items-center gap-3 duration-0"
+                    >
+                      <img
+                        src="./assets/img/icon-tab-left.png"
+                        alt="Icon"
+                        class="hidden md:block"
+                      />
+                      <h3
+                        class="font-display font-bold uppercase text-white lg:text-[32px]"
+                      >
+                        мечник
+                      </h3>
+                      <img
+                        src="./assets/img/icon-tab-left.png"
+                        alt="Icon"
+                        class="hidden md:block"
+                      />
+                    </div>
+
+                    <!-- Features -->
+                    <div class="relative z-10 space-y-[103px]">
+                      <div class="space-y-7 md:space-y-14">
+                        <div
+                          class="flex items-center gap-4 md:gap-8 pt-4 md:pt-6"
+                        >
+                          <img
+                            src="./assets/img/role-class-1.png"
+                            alt="Icon"
+                            class="size-9 md:size-auto"
+                          />
+
+                          <!-- Skills -->
+                          <div class="text-white">
+                            <p
+                              class="text-xs lg:text-2xl font-bold text-shadow"
+                            >
+                              Человек
+                            </p>
+                            <ul>
+                              <li class="flex items-center">
+                                <img
+                                  src="./assets/svg/icon-skill.svg"
+                                  alt="Icon"
+                                />
+                                <span class="text-[8px] md:text-base"
+                                  >Damage</span
+                                >
+                              </li>
+                              <li class="flex items-center">
+                                <img
+                                  src="./assets/svg/icon-skill.svg"
+                                  alt="Icon"
+                                />
+                                <span class="text-[8px] md:text-base">AOE</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- Text -->
+                        <p
+                          class="max-w-40 md:max-w-[393px] text-white text-[8px] sm:text-xs md:text-base"
+                        >
+                          Присоединяйтесь к игрокам по всему миру на одном
+                          сервере. Переключайтесь между ландшафтным и портретным
+                          режимами по желанию.
+                        </p>
+
+                        <div
+                          class="w-fit relative text-[7px] md:text-sm text-white ml-8 md:ml-12"
+                        >
+                          <span class="absolute -left-1/2 -top-[15%]"
+                            >Здоровье</span
+                          >
+                          <span class="absolute -right-1/2 -top-[15%]"
+                            >Кооперация</span
+                          >
+                          <span class="absolute -left-[20%] -bottom-[15%]"
+                            >Дамаг</span
+                          >
+                          <span class="absolute -right-1/2 -bottom-[15%]"
+                            >Сложность</span
+                          >
+                          <img
+                            src="./assets/img/role-info-1.png"
+                            alt="Role info"
+                            class="size-12 md:size-auto"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Image -->
+                  <img
+                    src="./assets/img/img-hero-1.png"
+                    alt="Hero Image"
+                    class="image-section xs:w-3/4 sm:w-2/3 md:w-[90%] lg:w-auto absolute bottom-0 sm:right-20 lg:right-1/4 xl:right-auto z-10 opacity-0 translate-x-full transition-all duration-500"
+                  />
+                </div>
+                <!-- Content 2 -->
+                <div id="tab2" class="tab-content hidden">
+                  <!-- Title BG -->
+                  <img
+                    src="./assets/img/img-classes-name.png"
+                    alt="Image"
+                    class="h-12 lg:h-20 w-[55%] xs:w-[35%] lg:w-1/2 xl:w-[38%] 3xl:w-[35%] 4xl:w-[40%] absolute top-[4%] md:top-[4.3%] lg:top-[6%] xl:top-[7.5%] 2xl:top-[7.2%] -left-5 lg:-left-20 z-20"
+                  />
+                  <!-- info -->
+                  <div
+                    class="info-section opacity-0 -translate-x-full transition-all duration-500"
+                  >
+                    <!-- Name -->
+                    <div
+                      class="relative z-20 flex items-center gap-3 duration-0"
+                    >
+                      <img
+                        src="./assets/img/icon-tab-left.png"
+                        alt="Icon"
+                        class="hidden md:block"
+                      />
+                      <h3
+                        class="font-display font-bold uppercase text-white lg:text-[32px]"
+                      >
+                        Мастер клинка
+                      </h3>
+                      <img
+                        src="./assets/img/icon-tab-left.png"
+                        alt="Icon"
+                        class="hidden md:block"
+                      />
+                    </div>
+
+                    <!-- Features -->
+                    <div class="relative z-10 space-y-[103px]">
+                      <div class="space-y-7 md:space-y-14">
+                        <div
+                          class="flex items-center gap-4 md:gap-8 pt-4 md:pt-6"
+                        >
+                          <img
+                            src="./assets/img/role-class-2.png"
+                            alt="Icon"
+                            class="size-9 md:size-auto"
+                          />
+
+                          <!-- Skills -->
+                          <div class="text-white">
+                            <p
+                              class="text-xs md:text-2xl font-bold text-shadow"
+                            >
+                              Человек
+                            </p>
+                            <ul>
+                              <li class="flex items-center">
+                                <img
+                                  src="./assets/svg/icon-skill.svg"
+                                  alt="Icon"
+                                />
+                                <span class="text-[8px] md:text-base"
+                                  >Damage</span
+                                >
+                              </li>
+                              <li class="flex items-center">
+                                <img
+                                  src="./assets/svg/icon-skill.svg"
+                                  alt="Icon"
+                                />
+                                <span class="text-[8px] md:text-base"
+                                  >Контроль</span
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- Text -->
+                        <p
+                          class="max-w-40 md:max-w-[393px] text-white text-[8px] sm:text-xs md:text-base"
+                        >
+                          Присоединяйтесь к игрокам по всему миру на одном
+                          сервере. Переключайтесь между ландшафтным и портретным
+                          режимами по желанию.
+                        </p>
+
+                        <div
+                          class="w-fit relative text-[7px] md:text-sm text-white ml-8 md:ml-12"
+                        >
+                          <span class="absolute -left-1/2 -top-[15%]"
+                            >Здоровье</span
+                          >
+                          <span class="absolute -right-1/2 -top-[15%]"
+                            >Кооперация</span
+                          >
+                          <span class="absolute -left-[20%] -bottom-[15%]"
+                            >Дамаг</span
+                          >
+                          <span class="absolute -right-1/2 -bottom-[15%]"
+                            >Сложность</span
+                          >
+                          <img
+                            src="./assets/img/role-info-2.png"
+                            alt="Role info"
+                            class="size-12 md:size-auto"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Image -->
+                  <img
+                    src="./assets/img/img-hero-2.png"
+                    alt="Hero Image"
+                    class="image-section xs:w-2/3 xl:w-auto absolute bottom-0 right-0 lg:right-auto lg:left-[15%] 2xl:left-1/4 3xl:left-[30%] opacity-0 translate-x-full transition-all duration-500"
+                  />
+                </div>
+                <!-- Content 3 -->
+                <div id="tab3" class="tab-content hidden">
+                  <!-- Title BG -->
+                  <img
+                    src="./assets/img/img-classes-name.png"
+                    alt="Image"
+                    class="h-12 lg:h-20 w-1/2 xs:w-[30%] lg:w-[40%] 2xl:w-[30%] 3xl:w-[32%] 4xl:w-[37%] absolute top-[4%] md:top-[4.3%] lg:top-[6%] xl:top-[7.5%] 2xl:top-[7.2%] -left-5 lg:-left-20 z-20"
+                  />
+                  <!-- info -->
+                  <div
+                    class="info-section opacity-0 -translate-x-full transition-all duration-500"
+                  >
+                    <!-- Name -->
+                    <div
+                      class="relative z-20 flex items-center gap-3 duration-0"
+                    >
+                      <img
+                        src="./assets/img/icon-tab-left.png"
+                        alt="Icon"
+                        class="hidden md:block"
+                      />
+                      <h3
+                        class="font-display font-bold uppercase text-white lg:text-[32px]"
+                      >
+                        волшебник
+                      </h3>
+                      <img
+                        src="./assets/img/icon-tab-left.png"
+                        alt="Icon"
+                        class="hidden md:block"
+                      />
+                    </div>
+
+                    <!-- Features -->
+                    <div class="relative z-10 space-y-[103px]">
+                      <div class="space-y-7 md:space-y-14">
+                        <div
+                          class="flex items-center gap-4 md:gap-8 pt-4 md:pt-6"
+                        >
+                          <img
+                            src="./assets/img/role-class-3.png"
+                            alt="Icon"
+                            class="size-9 md:size-auto"
+                          />
+
+                          <!-- Skills -->
+                          <div class="text-white">
+                            <p
+                              class="text-xs md:text-2xl font-bold text-shadow"
+                            >
+                              Человек
+                            </p>
+                            <ul>
+                              <li class="flex items-center">
+                                <img
+                                  src="./assets/svg/icon-skill.svg"
+                                  alt="Icon"
+                                />
+                                <span class="text-[8px] md:text-base"
+                                  >Damage</span
+                                >
+                              </li>
+                              <li class="flex items-center">
+                                <img
+                                  src="./assets/svg/icon-skill.svg"
+                                  alt="Icon"
+                                />
+                                <span class="text-[8px] md:text-base"
+                                  >Burst</span
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- Text -->
+                        <p
+                          class="max-w-40 md:max-w-[393px] text-white text-[8px] sm:text-xs md:text-base"
+                        >
+                          Присоединяйтесь к игрокам по всему миру на одном
+                          сервере. Переключайтесь между ландшафтным и портретным
+                          режимами по желанию.
+                        </p>
+
+                        <div
+                          class="w-fit relative text-[7px] md:text-sm text-white ml-8 md:ml-12"
+                        >
+                          <span class="absolute -left-1/2 -top-[15%]"
+                            >Здоровье</span
+                          >
+                          <span class="absolute -right-1/2 -top-[15%]"
+                            >Кооперация</span
+                          >
+                          <span class="absolute -left-[20%] -bottom-[15%]"
+                            >Дамаг</span
+                          >
+                          <span class="absolute -right-1/2 -bottom-[15%]"
+                            >Сложность</span
+                          >
+                          <img
+                            src="./assets/img/role-info-3.png"
+                            alt="Role info"
+                            class="size-12 md:size-auto"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Image -->
+                  <img
+                    src="./assets/img/img-hero-3.png"
+                    alt="Hero Image"
+                    class="image-section w-full xs:w-auto sm:w-3/4 md:w-auto absolute bottom-0 opacity-0 translate-x-full transition-all duration-500"
+                  />
+                </div>
+                <!-- Content 4 -->
+                <div id="tab4" class="tab-content hidden">
+                  <!-- Title BG -->
+                  <img
+                    src="./assets/img/img-classes-name.png"
+                    alt="Image"
+                    class="h-12 lg:h-20 w-1/2 xs:w-[30%] lg:w-1/3 2xl:w-1/4 3xl:w-[32%] 4xl:w-[37%] absolute top-[4%] md:top-[4.3%] lg:top-[6%] xl:top-[7.5%] 2xl:top-[7.2%] -left-5 lg:-left-20 z-20"
+                  />
+                  <!-- info -->
+                  <div
+                    class="info-section opacity-0 -translate-x-full transition-all duration-500"
+                  >
+                    <!-- Name -->
+                    <div
+                      class="relative z-20 flex items-center gap-3 duration-0"
+                    >
+                      <img
+                        src="./assets/img/icon-tab-left.png"
+                        alt="Icon"
+                        class="hidden md:block"
+                      />
+                      <h3
+                        class="font-display font-bold uppercase text-white lg:text-[32px]"
+                      >
+                        варвар
+                      </h3>
+                      <img
+                        src="./assets/img/icon-tab-left.png"
+                        alt="Icon"
+                        class="hidden md:block"
+                      />
+                    </div>
+
+                    <!-- Features -->
+                    <div class="relative z-10 space-y-[103px]">
+                      <div class="space-y-7 md:space-y-14">
+                        <div
+                          class="flex items-center gap-4 md:gap-8 pt-4 md:pt-6"
+                        >
+                          <img
+                            src="./assets/img/role-class-4.png"
+                            alt="Icon"
+                            class="size-9 md:size-auto"
+                          />
+
+                          <!-- Skills -->
+                          <div class="text-white">
+                            <p
+                              class="text-xs md:text-2xl font-bold text-shadow"
+                            >
+                              Зверь
+                            </p>
+                            <ul>
+                              <li class="flex items-center">
+                                <img
+                                  src="./assets/svg/icon-skill.svg"
+                                  alt="Icon"
+                                />
+                                <span class="text-[8px] md:text-base"
+                                  >Танк</span
+                                >
+                              </li>
+                              <li class="flex items-center">
+                                <img
+                                  src="./assets/svg/icon-skill.svg"
+                                  alt="Icon"
+                                />
+                                <span class="text-[8px] md:text-base"
+                                  >Преследование</span
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- Text -->
+                        <p
+                          class="max-w-40 md:max-w-[393px] text-white text-[8px] sm:text-xs md:text-base"
+                        >
+                          Присоединяйтесь к игрокам по всему миру на одном
+                          сервере. Переключайтесь между ландшафтным и портретным
+                          режимами по желанию.
+                        </p>
+
+                        <div
+                          class="w-fit relative text-[7px] md:text-sm text-white ml-8 md:ml-12"
+                        >
+                          <span class="absolute -left-1/2 -top-[15%]"
+                            >Здоровье</span
+                          >
+                          <span class="absolute -right-1/2 -top-[15%]"
+                            >Кооперация</span
+                          >
+                          <span class="absolute -left-[20%] -bottom-[15%]"
+                            >Дамаг</span
+                          >
+                          <span class="absolute -right-1/2 -bottom-[15%]"
+                            >Сложность</span
+                          >
+                          <img
+                            src="./assets/img/role-info-4.png"
+                            alt="Role info"
+                            class="size-12 md:size-auto"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Image -->
+                  <img
+                    src="./assets/img/img-hero-4.png"
+                    alt="Hero Image"
+                    class="image-section w-3/4 xs:w-2/3 sm:w-1/2 md:w-2/3 lg:w-auto absolute bottom-0 left-1/4 3xl:left-1/3 opacity-0 translate-x-full transition-all duration-500"
+                  />
+                </div>
+                <!-- Content 5 -->
+                <div id="tab5" class="tab-content hidden">
+                  <!-- Title BG -->
+                  <img
+                    src="./assets/img/img-classes-name.png"
+                    alt="Image"
+                    class="h-12 lg:h-20 w-1/2 xs:w-[30%] lg:w-1/3 2xl:w-1/4 3xl:w-[32%] 4xl:w-[37%] absolute top-[4%] md:top-[4.3%] lg:top-[6%] xl:top-[7.5%] 2xl:top-[7.2%] -left-5 lg:-left-20 z-20"
+                  />
+                  <!-- info -->
+                  <div
+                    class="info-section opacity-0 -translate-x-full transition-all duration-500"
+                  >
+                    <!-- Name -->
+                    <div
+                      class="relative z-20 flex items-center gap-3 duration-0"
+                    >
+                      <img
+                        src="./assets/img/icon-tab-left.png"
+                        alt="Icon"
+                        class="hidden md:block"
+                      />
+                      <h3
+                        class="font-display font-bold uppercase text-white lg:text-[32px]"
+                      >
+                        лиса
+                      </h3>
+                      <img
+                        src="./assets/img/icon-tab-left.png"
+                        alt="Icon"
+                        class="hidden md:block"
+                      />
+                    </div>
+
+                    <!-- Features -->
+                    <div class="relative z-10 space-y-[103px]">
+                      <div class="space-y-7 md:space-y-14">
+                        <div
+                          class="flex items-center gap-4 md:gap-8 pt-4 md:pt-6"
+                        >
+                          <img
+                            src="./assets/img/role-class-5.png"
+                            alt="Icon"
+                            class="size-9 md:size-auto"
+                          />
+
+                          <!-- Skills -->
+                          <div class="text-white">
+                            <p
+                              class="text-xs md:text-2xl font-bold text-shadow"
+                            >
+                              Человек
+                            </p>
+                            <ul>
+                              <li class="flex items-center">
+                                <img
+                                  src="./assets/svg/icon-skill.svg"
+                                  alt="Icon"
+                                />
+                                <span class="text-[8px] md:text-base"
+                                  >Damage</span
+                                >
+                              </li>
+                              <li class="flex items-center">
+                                <img
+                                  src="./assets/svg/icon-skill.svg"
+                                  alt="Icon"
+                                />
+                                <span class="text-[8px] md:text-base">AOE</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- Text -->
+                        <p
+                          class="max-w-40 md:max-w-[393px] text-white text-[8px] sm:text-xs md:text-base"
+                        >
+                          Присоединяйтесь к игрокам по всему миру на одном
+                          сервере. Переключайтесь между ландшафтным и портретным
+                          режимами по желанию.
+                        </p>
+
+                        <div
+                          class="w-fit relative text-[7px] md:text-sm text-white ml-8 md:ml-12"
+                        >
+                          <span class="absolute -left-1/2 -top-[15%]"
+                            >Здоровье</span
+                          >
+                          <span class="absolute -right-1/2 -top-[15%]"
+                            >Кооперация</span
+                          >
+                          <span class="absolute -left-[20%] -bottom-[15%]"
+                            >Дамаг</span
+                          >
+                          <span class="absolute -right-1/2 -bottom-[15%]"
+                            >Сложность</span
+                          >
+                          <img
+                            src="./assets/img/role-info-5.png"
+                            alt="Role info"
+                            class="size-12 md:size-auto"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Image -->
+                  <img
+                    src="./assets/img/img-hero-5.png"
+                    alt="Hero Image"
+                    class="image-section w-full xs:w-auto sm:w-3/4 md:w-auto absolute bottom-0 left-1/4 opacity-0 translate-x-full transition-all duration-500"
+                  />
+                </div>
+                <!-- Content 6 -->
+                <div id="tab6" class="tab-content hidden">
+                  <!-- Title BG -->
+                  <img
+                    src="./assets/img/img-classes-name.png"
+                    alt="Image"
+                    class="h-12 lg:h-20 w-1/2 xs:w-[30%] lg:w-1/3 2xl:w-1/4 3xl:w-[32%] 4xl:w-[37%] absolute top-[4%] md:top-[4.3%] lg:top-[6%] xl:top-[7.5%] 2xl:top-[7.2%] -left-5 lg:-left-20 z-20"
+                  />
+                  <!-- info -->
+                  <div
+                    class="info-section opacity-0 -translate-x-full transition-all duration-500"
+                  >
+                    <!-- Name -->
+                    <div
+                      class="relative z-20 flex items-center gap-3 duration-0"
+                    >
+                      <img
+                        src="./assets/img/icon-tab-left.png"
+                        alt="Icon"
+                        class="hidden md:block"
+                      />
+                      <h3
+                        class="font-display font-bold uppercase text-white lg:text-[32px]"
+                      >
+                        Дух
+                      </h3>
+                      <img
+                        src="./assets/img/icon-tab-left.png"
+                        alt="Icon"
+                        class="hidden md:block"
+                      />
+                    </div>
+
+                    <!-- Features -->
+                    <div class="relative z-10 space-y-[103px]">
+                      <div class="space-y-7 md:space-y-14">
+                        <div
+                          class="flex items-center gap-4 md:gap-8 pt-4 md:pt-6"
+                        >
+                          <img
+                            src="./assets/img/role-class-6.png"
+                            alt="Icon"
+                            class="size-9 md:size-auto"
+                          />
+
+                          <!-- Skills -->
+                          <div class="text-white">
+                            <p
+                              class="text-xs md:text-2xl font-bold text-shadow"
+                            >
+                              Эльф
+                            </p>
+                            <ul>
+                              <li class="flex items-center">
+                                <img
+                                  src="./assets/svg/icon-skill.svg"
+                                  alt="Icon"
+                                />
+                                <span class="text-[8px] md:text-base">Хил</span>
+                              </li>
+                              <li class="flex items-center">
+                                <img
+                                  src="./assets/svg/icon-skill.svg"
+                                  alt="Icon"
+                                />
+                                <span class="text-[8px] md:text-base"
+                                  >Ассист</span
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- Text -->
+                        <p
+                          class="max-w-40 md:max-w-[393px] text-white text-[8px] sm:text-xs md:text-base"
+                        >
+                          Присоединяйтесь к игрокам по всему миру на одном
+                          сервере. Переключайтесь между ландшафтным и портретным
+                          режимами по желанию.
+                        </p>
+
+                        <div
+                          class="w-fit relative text-[7px] md:text-sm text-white ml-8 md:ml-12"
+                        >
+                          <span class="absolute -left-1/2 -top-[15%]"
+                            >Здоровье</span
+                          >
+                          <span class="absolute -right-1/2 -top-[15%]"
+                            >Кооперация</span
+                          >
+                          <span class="absolute -left-[20%] -bottom-[15%]"
+                            >Дамаг</span
+                          >
+                          <span class="absolute -right-1/2 -bottom-[15%]"
+                            >Сложность</span
+                          >
+                          <img
+                            src="./assets/img/role-info-6.png"
+                            alt="Role info"
+                            class="size-12 md:size-auto"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Image -->
+                  <img
+                    src="./assets/img/img-hero-6.png"
+                    alt="Hero Image"
+                    class="image-section w-full xs:w-auto sm:w-3/4 xl:w-auto absolute bottom-0 right-0 lg:right-auto lg:left-20 xl:left-[15%] 3xl:left-[20%] opacity-0 translate-x-full transition-all duration-500"
+                  />
+                </div>
+                <!-- Content 7 -->
+                <div id="tab7" class="tab-content hidden">
+                  <!-- Title BG -->
+                  <img
+                    src="./assets/img/img-classes-name.png"
+                    alt="Image"
+                    class="h-12 lg:h-20 w-1/2 xs:w-[30%] lg:w-1/3 2xl:w-1/4 3xl:w-[32%] 4xl:w-[37%] absolute top-[4%] md:top-[4.3%] lg:top-[6%] xl:top-[7.5%] 2xl:top-[7.2%] -left-5 lg:-left-20 z-20"
+                  />
+                  <!-- info -->
+                  <div
+                    class="info-section opacity-0 -translate-x-full transition-all duration-500"
+                  >
+                    <!-- Name -->
+                    <div
+                      class="relative z-20 flex items-center gap-3 duration-0"
+                    >
+                      <img
+                        src="./assets/img/icon-tab-left.png"
+                        alt="Icon"
+                        class="hidden md:block"
+                      />
+                      <h3
+                        class="font-display font-bold uppercase text-white lg:text-[32px]"
+                      >
+                        Лучник
+                      </h3>
+                      <img
+                        src="./assets/img/icon-tab-left.png"
+                        alt="Icon"
+                        class="hidden md:block"
+                      />
+                    </div>
+
+                    <!-- Features -->
+                    <div class="relative z-10 space-y-[103px]">
+                      <div class="space-y-7 md:space-y-14">
+                        <div
+                          class="flex items-center gap-4 md:gap-8 pt-4 md:pt-6"
+                        >
+                          <img
+                            src="./assets/img/role-class-7.png"
+                            alt="Icon"
+                            class="size-9 md:size-auto"
+                          />
+
+                          <!-- Skills -->
+                          <div class="text-white">
+                            <p
+                              class="text-xs md:text-2xl font-bold text-shadow"
+                            >
+                              Эльф
+                            </p>
+                            <ul>
+                              <li class="flex items-center">
+                                <img
+                                  src="./assets/svg/icon-skill.svg"
+                                  alt="Icon"
+                                />
+                                <span class="text-[8px] md:text-base"
+                                  >Дамаг</span
+                                >
+                              </li>
+                              <li class="flex items-center">
+                                <img
+                                  src="./assets/svg/icon-skill.svg"
+                                  alt="Icon"
+                                />
+                                <span class="text-[8px] md:text-base"
+                                  >Agility</span
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- Text -->
+                        <p
+                          class="max-w-40 md:max-w-[393px] text-white text-[8px] sm:text-xs md:text-base"
+                        >
+                          Присоединяйтесь к игрокам по всему миру на одном
+                          сервере. Переключайтесь между ландшафтным и портретным
+                          режимами по желанию.
+                        </p>
+
+                        <div
+                          class="w-fit relative text-[7px] md:text-sm text-white ml-8 md:ml-12"
+                        >
+                          <span class="absolute -left-1/2 -top-[15%]"
+                            >Здоровье</span
+                          >
+                          <span class="absolute -right-1/2 -top-[15%]"
+                            >Кооперация</span
+                          >
+                          <span class="absolute -left-[20%] -bottom-[15%]"
+                            >Дамаг</span
+                          >
+                          <span class="absolute -right-1/2 -bottom-[15%]"
+                            >Сложность</span
+                          >
+                          <img
+                            src="./assets/img/role-info-7.png"
+                            alt="Role info"
+                            class="size-12 md:size-auto"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Image -->
+                  <img
+                    src="./assets/img/img-hero-7.png"
+                    alt="Hero Image"
+                    class="image-section w-full xs:w-auto sm:w-3/4 md:w-auto absolute bottom-0 left-[15%] lg:left-[10%] 3xl:left-[20%] opacity-0 translate-x-full transition-all duration-500"
+                  />
+                </div>
+                <!-- Content 8 -->
+                <div id="tab8" class="tab-content hidden">
+                  <!-- Title BG -->
+                  <img
+                    src="./assets/img/img-classes-name.png"
+                    alt="Image"
+                    class="h-12 lg:h-20 w-1/2 xs:w-[30%] lg:w-1/3 2xl:w-1/4 3xl:w-[32%] 4xl:w-[37%] absolute top-[4%] md:top-[4.3%] lg:top-[6%] xl:top-[7.5%] 2xl:top-[7.2%] -left-5 lg:-left-20 z-20"
+                  />
+                  <!-- info -->
+                  <div
+                    class="info-section opacity-0 -translate-x-full transition-all duration-500"
+                  >
+                    <!-- Name -->
+                    <div
+                      class="relative z-20 flex items-center gap-3 duration-0"
+                    >
+                      <img
+                        src="./assets/img/icon-tab-left.png"
+                        alt="Icon"
+                        class="hidden md:block"
+                      />
+                      <h3
+                        class="font-display font-bold uppercase text-white lg:text-[32px]"
+                      >
+                        ассасин
+                      </h3>
+                      <img
+                        src="./assets/img/icon-tab-left.png"
+                        alt="Icon"
+                        class="hidden md:block"
+                      />
+                    </div>
+
+                    <!-- Features -->
+                    <div class="relative z-10 space-y-[103px]">
+                      <div class="space-y-7 md:space-y-14">
+                        <div
+                          class="flex items-center gap-4 md:gap-8 pt-4 md:pt-6"
+                        >
+                          <img
+                            src="./assets/img/role-class-8.png"
+                            alt="Icon"
+                            class="size-9 md:size-auto"
+                          />
+
+                          <!-- Skills -->
+                          <div class="text-white">
+                            <p
+                              class="text-xs md:text-2xl font-bold text-shadow"
+                            >
+                              Зверь
+                            </p>
+                            <ul>
+                              <li class="flex items-center">
+                                <img
+                                  src="./assets/svg/icon-skill.svg"
+                                  alt="Icon"
+                                />
+                                <span class="text-[8px] md:text-base">DPS</span>
+                              </li>
+                              <li class="flex items-center">
+                                <img
+                                  src="./assets/svg/icon-skill.svg"
+                                  alt="Icon"
+                                />
+                                <span class="text-[8px] md:text-base"
+                                  >Assassinations</span
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- Text -->
+                        <p
+                          class="max-w-40 md:max-w-[393px] text-white text-[8px] sm:text-xs md:text-base"
+                        >
+                          Присоединяйтесь к игрокам по всему миру на одном
+                          сервере. Переключайтесь между ландшафтным и портретным
+                          режимами по желанию.
+                        </p>
+
+                        <div
+                          class="w-fit relative text-[7px] md:text-sm text-white ml-8 md:ml-12"
+                        >
+                          <span class="absolute -left-1/2 -top-[15%]"
+                            >Здоровье</span
+                          >
+                          <span class="absolute -right-1/2 -top-[15%]"
+                            >Кооперация</span
+                          >
+                          <span class="absolute -left-[20%] -bottom-[15%]"
+                            >Дамаг</span
+                          >
+                          <span class="absolute -right-1/2 -bottom-[15%]"
+                            >Сложность</span
+                          >
+                          <img
+                            src="./assets/img/role-info-8.png"
+                            alt="Role info"
+                            class="size-12 md:size-auto"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Image -->
+                  <img
+                    src="./assets/img/img-hero-8.png"
+                    alt="Hero Image"
+                    class="image-section w-3/4 xs:w-2/3 sm:w-[55%] lg:w-auto absolute bottom-0 right-0 lg:right-auto lg:left-1/4 2xl:left-[27%] opacity-0 translate-x-full transition-all duration-500"
+                  />
+                </div>
+              </div>
+
+              <!-- Video -->
+              <div class="hidden">
+                <!-- Play Video -->
+                <div
+                  class="hidden xs:block absolute right-[15%] xl:right-1/4 top-1/2 -translate-y-1/2 z-20 shrink-0 bg-black-300/60 size-16 lg:size-[4.5625rem] rounded-full overflow-hidden p-[0.4375rem] secondary-hover mb-4"
+                >
+                  <button
+                    class="videoPlay-btn relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                  >
+                    <img
+                      class="ml-1"
+                      src="./assets/svg/video-play.svg"
+                      alt="Play-video"
+                      class="size-4 lg:size-auto"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Media Video & Images -->
+      <section
+        id="media"
+        class="bg-media-mobile xs:bg-media bg-center bg-no-repeat bg-cover pt-[4.25rem] lg:pt-24 xl:pt-[7.6875rem] pb-11 lg:pb-20 xl:pb-[6.375rem] mt-16"
+      >
+        <div class="max-w-base mx-auto px-3.5 lg:px-6">
+          <div class="relative flex items-center justify-center gap-0.5">
+            <img
+              class="h-3 md:h-5 lg:h-[30px]"
+              src="./assets/svg/heading-line.svg"
+              alt=""
+            />
+            <h2
+              class="font-display font-bold text-2xl md:text-4xl lg:text-[3.125rem]/[4.375rem] text-white uppercase"
+            >
+              медиа
+            </h2>
+            <img
+              class="h-3 md:h-5 lg:h-[30px]"
+              src="./assets/svg/heading-line__right.svg"
+              alt=""
+            />
+          </div>
+
+          <!-- Media Tabs -->
+          <div class="max-w-[556px] mx-auto flex justify-center gap-x-5 mt-6">
+            <button
+              data-tab-media="images"
+              class="tab-btn-media active-media-tab w-full flex items-center justify-center gap-x-3 h-9 xs:h-12 xl:h-[60px] relative rounded-full px-5 xl:px-10"
+            >
+              <span
+                class="relative z-10 font-manrope font-semibold text-[0.8531rem]/[1.195rem] md:text-base xl:text-xl/[1.7075rem]"
+              >
+                Изображения
+              </span>
+            </button>
+            <button
+              data-tab-media="videos"
+              class="tab-btn-media flex items-center justify-center gap-3 max-w-[16.75rem] w-full h-9 xs:h-12 xl:h-[60px] relative rounded-full overflow-hidden px-5 xl:px-10"
+            >
+              <span
+                class="relative z-10 font-manrope font-semibold text-[0.8531rem]/[1.195rem] md:text-base xl:text-xl/[1.7075rem]"
+              >
+                Видео
+              </span>
+            </button>
+          </div>
+
+          <!-- Images Slider -->
+          <div
+            data-content-media="images"
+            class="tab-content-media mt-6 xs:mt-10 lg:mt-16"
+          >
+            <!-- Images Swiper -->
+            <div class="swiper images-swiper">
+              <div class="swiper-wrapper py-1">
+                <div class="swiper-slide">
+                  <div class="cursor-pointer relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[17.5rem] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-slide-1.png"
+                        alt="Image"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cursor-pointer relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[17.5rem] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-slide-2.png"
+                        alt="Image"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cursor-pointer relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[17.5rem] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-slide-3.png"
+                        alt="Image"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cursor-pointer relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[17.5rem] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-slide-4.png"
+                        alt="Image"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cursor-pointer relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[17.5rem] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-slide-5.png"
+                        alt="Image"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cursor-pointer relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[17.5rem] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-slide-6.png"
+                        alt="Image"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cursor-pointer relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[17.5rem] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-slide-6.png"
+                        alt="Image"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cursor-pointer relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[17.5rem] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-slide-5.png"
+                        alt="Image"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cursor-pointer relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[17.5rem] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-slide-4.png"
+                        alt="Image"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cursor-pointer relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[17.5rem] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-slide-3.png"
+                        alt="Image"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cursor-pointer relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[17.5rem] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-slide-2.png"
+                        alt="Image"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="cursor-pointer relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[17.5rem] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-slide-1.png"
+                        alt="Image"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Custom Prev/Next Navigation & Pagination -->
+            <div
+              class="relative max-w-fit mx-auto flex items-center justify-center gap-x-12 lg:gap-x-8 mt-9 xl:mt-[3.875rem]"
+            >
+              <!-- Prev -->
+              <button
+                class="images-button-prev cursor-pointer !shrink-0 bg-black-300/60 size-[3.125rem] lg:size-16 2xl:size-[5.625rem] rounded-full overflow-hidden p-[0.4375rem] transition duration-200 ease-in-out hover:shadow-custom"
+              >
+                <div
+                  class="border-glow relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                >
+                  <img
+                    class="w-4 lg:w-5 h-5 lg:h-6 xl:w-[1.875rem] xl:h-9"
+                    src="./assets/svg/prev.svg"
+                    alt="Prev"
+                  />
+                </div>
+              </button>
+
+              <!-- Pagination -->
+              <p
+                class="images-pagination font-display font-bold text-[2rem]/[2.8rem] 2xl:text-[3.125rem]/[4.375rem] text-white"
+              >
+                1/<span class="text-base-blue-200">1</span>
+              </p>
+
+              <!-- Next -->
+              <button
+                class="images-button-next cursor-pointer !shrink-0 bg-black-300/60 size-[3.125rem] lg:size-16 2xl:size-[5.625rem] rounded-full overflow-hidden p-[0.4375rem] transition duration-200 ease-in-out hover:shadow-custom"
+              >
+                <div
+                  class="border-glow relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                >
+                  <img
+                    class="w-4 lg:w-5 h-5 sm:h-6 lg:h-8 xl:w-[1.875rem] xl:h-9 rotate-180"
+                    src="./assets/svg/prev.svg"
+                    alt="Prev"
+                  />
+                </div>
+              </button>
+            </div>
+
+            <!-- Images Single Image Slide Popup -->
+            <div
+              class="image-slider-modal-overlay fixed translate-y-full inset-0 size-full z-50 bg-black/80 hidden sm:flex items-center justify-center transition-all duration-100 px-2"
+            >
+              <div
+                class="image-slider-modal max-w-full lg:max-w-[90%] xl:max-w-6xl relative translate-y-full transition-all duration-300"
+              >
+                <!-- Close Button -->
+                <button
+                  class="image-slider-modal-close-btn cursor-pointer !shrink-0 absolute -top-10 right-0 lg:-right-10 xl:-right-20 sm:-top-20 bg-black-300/60 size-10 sm:size-16 xl:size-[73px] rounded-full overflow-hidden p-[0.4375rem] transition duration-200 ease-in-out hover:shadow-custom"
+                >
+                  <div
+                    class="border-glow relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                  >
+                    <svg
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="size-3.5 sm:size-7 xl:size-auto"
+                    >
+                      <path
+                        d="M3.5 3L27 26.5"
+                        stroke="white"
+                        stroke-width="6"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M26.5 3L3 26.5"
+                        stroke="white"
+                        stroke-width="6"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </div>
+                </button>
+
+                <!-- Images Single Slider -->
+                <div class="swiper images-single-swiper">
+                  <div class="swiper-wrapper py-1">
+                    <div class="swiper-slide">
+                      <div class="cursor-pointer relative image-video__card">
+                        <div
+                          class="relative z-10 overflow-hidden aspect-video image-video__product"
+                        >
+                          <img
+                            class="size-full object-fill"
+                            src="./assets/img/img-slide-1.png"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="cursor-pointer relative image-video__card">
+                        <div
+                          class="relative z-10 overflow-hidden aspect-video image-video__product"
+                        >
+                          <img
+                            class="size-full object-fill"
+                            src="./assets/img/img-slide-2.png"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="cursor-pointer relative image-video__card">
+                        <div
+                          class="relative z-10 overflow-hidden aspect-video image-video__product"
+                        >
+                          <img
+                            class="size-full object-fill"
+                            src="./assets/img/img-slide-3.png"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="cursor-pointer relative image-video__card">
+                        <div
+                          class="relative z-10 overflow-hidden aspect-video image-video__product"
+                        >
+                          <img
+                            class="size-full object-fill"
+                            src="./assets/img/img-slide-4.png"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="cursor-pointer relative image-video__card">
+                        <div
+                          class="relative z-10 overflow-hidden aspect-video image-video__product"
+                        >
+                          <img
+                            class="size-full object-fill"
+                            src="./assets/img/img-slide-5.png"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="cursor-pointer relative image-video__card">
+                        <div
+                          class="relative z-10 overflow-hidden aspect-video image-video__product"
+                        >
+                          <img
+                            class="size-full object-fill"
+                            src="./assets/img/img-slide-6.png"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="cursor-pointer relative image-video__card">
+                        <div
+                          class="relative z-10 overflow-hidden aspect-video image-video__product"
+                        >
+                          <img
+                            class="size-full object-fill"
+                            src="./assets/img/img-slide-6.png"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="cursor-pointer relative image-video__card">
+                        <div
+                          class="relative z-10 overflow-hidden aspect-video image-video__product"
+                        >
+                          <img
+                            class="size-full object-fill"
+                            src="./assets/img/img-slide-5.png"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="cursor-pointer relative image-video__card">
+                        <div
+                          class="relative z-10 overflow-hidden aspect-video image-video__product"
+                        >
+                          <img
+                            class="size-full object-fill"
+                            src="./assets/img/img-slide-4.png"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="cursor-pointer relative image-video__card">
+                        <div
+                          class="relative z-10 overflow-hidden aspect-video image-video__product"
+                        >
+                          <img
+                            class="size-full object-fill"
+                            src="./assets/img/img-slide-3.png"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="cursor-pointer relative image-video__card">
+                        <div
+                          class="relative z-10 overflow-hidden aspect-video image-video__product"
+                        >
+                          <img
+                            class="size-full object-fill"
+                            src="./assets/img/img-slide-2.png"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="cursor-pointer relative image-video__card">
+                        <div
+                          class="relative z-10 overflow-hidden aspect-video image-video__product"
+                        >
+                          <img
+                            class="size-full object-fill"
+                            src="./assets/img/img-slide-1.png"
+                            alt="Image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Custom Prev/Next Navigation -->
+                <div
+                  class="w-full absolute -bottom-1/4 lg:top-1/2 -translate-y-1/2 z-30 flex items-center justify-center lg:justify-between gap-40 lg:gap-0"
+                >
+                  <!-- Prev -->
+                  <button
+                    class="images-single-button-prev cursor-pointer !shrink-0 bg-black-300/60 size-10 sm:size-16 xl:size-[73px] rounded-full overflow-hidden p-[0.4375rem] transition duration-200 ease-in-out hover:shadow-custom -ml-12"
+                  >
+                    <div
+                      class="border-glow relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                    >
+                      <img
+                        class="w-4 lg:w-5 h-5 lg:h-6 xl:w-[1.875rem] xl:h-9"
+                        src="./assets/svg/prev.svg"
+                        alt="Prev"
+                      />
+                    </div>
+                  </button>
+
+                  <!-- Next -->
+                  <button
+                    class="images-single-button-next cursor-pointer !shrink-0 bg-black-300/60 size-10 sm:size-16 xl:size-[73px] rounded-full overflow-hidden p-[0.4375rem] transition duration-200 ease-in-out hover:shadow-custom -mr-12"
+                  >
+                    <div
+                      class="border-glow relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                    >
+                      <img
+                        class="w-4 lg:w-5 h-5 sm:h-6 lg:h-8 xl:w-[1.875rem] xl:h-9 rotate-180"
+                        src="./assets/svg/prev.svg"
+                        alt="Prev"
+                      />
+                    </div>
+                  </button>
+                </div>
+
+                <!-- Pagination Image Slider Single -->
+                <p
+                  class="images-single-pagination w-fit absolute left-1/2 -translate-x-1/2 -bottom-6 z-20 flex items-center justify-center bg-black/70 rounded-full font-display font-bold text-[2rem] 2xl:text-[3.125rem] text-white leading-[100%] -mt-4 px-10 py-1"
+                >
+                  1/1
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Videos Slider -->
+          <div
+            data-content-media="videos"
+            class="tab-content-media hidden mt-6 xs:mt-10 lg:mt-16"
+          >
+            <!-- Videos Swiper -->
+            <div class="swiper videos-swiper">
+              <div class="swiper-wrapper py-1">
+                <div class="swiper-slide">
+                  <div class="relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[280px] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-thumbnail-media-video-1.jpg"
+                        alt="Image"
+                      />
+                      <div
+                        class="absolute z-20 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 shrink-0 bg-black-300/60 size-12 lg:size-16 rounded-full overflow-hidden p-[7px] secondary-hover"
+                      >
+                        <button
+                          class="videoPlay-btn relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                        >
+                          <img
+                            class="size-4 lg:size-auto ml-1"
+                            src="./assets/svg/video-play.svg"
+                            alt="Play-video"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[280px] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-thumbnail-media-video-2.jpg"
+                        alt="Image"
+                      />
+                      <div
+                        class="absolute z-20 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 shrink-0 bg-black-300/60 size-12 lg:size-16 rounded-full overflow-hidden p-[7px] secondary-hover"
+                      >
+                        <button
+                          class="videoPlay-btn relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                        >
+                          <img
+                            class="size-4 lg:size-auto ml-1"
+                            src="./assets/svg/video-play.svg"
+                            alt="Play-video"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[280px] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-thumbnail-media-video-3.jpg"
+                        alt="Image"
+                      />
+                      <div
+                        class="absolute z-20 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 shrink-0 bg-black-300/60 size-12 lg:size-16 rounded-full overflow-hidden p-[7px] secondary-hover"
+                      >
+                        <button
+                          class="videoPlay-btn relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                        >
+                          <img
+                            class="size-4 lg:size-auto ml-1"
+                            src="./assets/svg/video-play.svg"
+                            alt="Play-video"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[280px] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-thumbnail-media-video-4.jpg"
+                        alt="Image"
+                      />
+                      <div
+                        class="absolute z-20 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 shrink-0 bg-black-300/60 size-12 lg:size-16 rounded-full overflow-hidden p-[7px] secondary-hover"
+                      >
+                        <button
+                          class="videoPlay-btn relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                        >
+                          <img
+                            class="size-4 lg:size-auto ml-1"
+                            src="./assets/svg/video-play.svg"
+                            alt="Play-video"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[280px] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-thumbnail-media-video-5.jpg"
+                        alt="Image"
+                      />
+                      <div
+                        class="absolute z-20 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 shrink-0 bg-black-300/60 size-12 lg:size-16 rounded-full overflow-hidden p-[7px] secondary-hover"
+                      >
+                        <button
+                          class="videoPlay-btn relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                        >
+                          <img
+                            class="size-4 lg:size-auto ml-1"
+                            src="./assets/svg/video-play.svg"
+                            alt="Play-video"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[280px] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-thumbnail-media-video-6.jpg"
+                        alt="Image"
+                      />
+                      <div
+                        class="absolute z-20 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 shrink-0 bg-black-300/60 size-12 lg:size-16 rounded-full overflow-hidden p-[7px] secondary-hover"
+                      >
+                        <button
+                          class="videoPlay-btn relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                        >
+                          <img
+                            class="size-4 lg:size-auto ml-1"
+                            src="./assets/svg/video-play.svg"
+                            alt="Play-video"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[280px] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-thumbnail-media-video-7.jpg"
+                        alt="Image"
+                      />
+                      <div
+                        class="absolute z-20 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 shrink-0 bg-black-300/60 size-12 lg:size-16 rounded-full overflow-hidden p-[7px] secondary-hover"
+                      >
+                        <button
+                          class="videoPlay-btn relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                        >
+                          <img
+                            class="size-4 lg:size-auto ml-1"
+                            src="./assets/svg/video-play.svg"
+                            alt="Play-video"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="relative image-video__card">
+                    <div
+                      class="relative z-10 overflow-hidden h-56 xl:h-[280px] image-video__product"
+                    >
+                      <img
+                        class="size-full object-cover"
+                        src="./assets/img/img-thumbnail-media-video-8.jpg"
+                        alt="Image"
+                      />
+                      <div
+                        class="absolute z-20 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 shrink-0 bg-black-300/60 size-12 lg:size-16 rounded-full overflow-hidden p-[7px] secondary-hover"
+                      >
+                        <button
+                          class="videoPlay-btn relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                        >
+                          <img
+                            class="size-4 lg:size-auto ml-1"
+                            src="./assets/svg/video-play.svg"
+                            alt="Play-video"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Custom Prev/Next Navigation & Pagination -->
+            <div
+              class="relative max-w-fit mx-auto flex items-center justify-center gap-x-12 lg:gap-x-8 mt-9 xl:mt-[3.875rem]"
+            >
+              <!-- Prev -->
+              <button
+                class="videos-button-prev cursor-pointer !shrink-0 bg-black-300/60 size-[3.125rem] lg:size-16 2xl:size-[5.625rem] rounded-full overflow-hidden p-[0.4375rem] transition duration-200 ease-in-out hover:shadow-custom"
+              >
+                <div
+                  class="border-glow relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                >
+                  <img
+                    class="w-4 lg:w-5 h-5 lg:h-6 xl:w-[1.875rem] xl:h-9"
+                    src="./assets/svg/prev.svg"
+                    alt="Prev"
+                  />
+                </div>
+              </button>
+
+              <!-- Pagination -->
+              <p
+                class="videos-pagination font-display font-bold text-[2rem]/[2.8rem] 2xl:text-[3.125rem]/[4.375rem] text-white"
+              >
+                1/<span class="text-base-blue-200">1</span>
+              </p>
+
+              <!-- Next -->
+              <button
+                class="videos-button-next cursor-pointer !shrink-0 bg-black-300/60 size-[3.125rem] lg:size-16 2xl:size-[5.625rem] rounded-full overflow-hidden p-[0.4375rem] transition duration-200 ease-in-out hover:shadow-custom"
+              >
+                <div
+                  class="border-glow relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                >
+                  <img
+                    class="w-4 lg:w-5 h-5 sm:h-6 lg:h-8 xl:w-[1.875rem] xl:h-9 rotate-180"
+                    src="./assets/svg/prev.svg"
+                    alt="Prev"
+                  />
+                </div>
+              </button>
+            </div>
+
+            <!-- Videos Single Image Slide Popup -->
+            <div
+              class="video-slider-modal-overlay fixed translate-y-full inset-0 size-full z-50 bg-black/80 flex items-center justify-center transition-all duration-100 px-2"
+            >
+              <div
+                class="video-slider-modal max-w-full lg:max-w-[90%] xl:max-w-6xl relative translate-y-full transition-all duration-300"
+              >
+                <!-- Close Button -->
+                <button
+                  class="video-slider-modal-close-btn cursor-pointer !shrink-0 absolute -top-10 right-0 lg:-right-10 xl:-right-20 sm:-top-20 bg-black-300/60 size-10 sm:size-16 xl:size-[73px] rounded-full overflow-hidden p-[0.4375rem] transition duration-200 ease-in-out hover:shadow-custom"
+                >
+                  <div
+                    class="border-glow relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                  >
+                    <svg
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="size-3.5 sm:size-7 xl:size-auto"
+                    >
+                      <path
+                        d="M3.5 3L27 26.5"
+                        stroke="white"
+                        stroke-width="6"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M26.5 3L3 26.5"
+                        stroke="white"
+                        stroke-width="6"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </div>
+                </button>
+
+                <!-- Videos Single Slider -->
+                <div class="swiper videos-single-swiper">
+                  <div class="swiper-wrapper py-1">
+                    <div class="swiper-slide">
+                      <div class="relative image-video__card hover:shadow-none">
+                        <div
+                          class="relative z-30 overflow-hidden aspect-video image-video__product hover:shadow-none"
+                        >
+                          <!-- Video Element -->
+                          <video
+                            class="video-media size-full object-cover hidden"
+                            src="./assets/vid/vid-7.mp4"
+                            controls
+                          ></video>
+                          <!-- Thumbnail Image -->
+                          <img
+                            class="size-full object-cover video-thumbnail"
+                            src="./assets/img/img-thumbnail-media-video-1.jpg"
+                            alt="Thumbnail"
+                          />
+                          <!-- Play Button -->
+                          <div
+                            class="absolute z-30 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 shrink-0 bg-black-300/60 size-12 lg:size-16 rounded-full overflow-hidden p-[7px] secondary-hover"
+                          >
+                            <button
+                              class="videoPlay-btn relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                            >
+                              <img
+                                class="size-4 lg:size-auto ml-1"
+                                src="./assets/svg/video-play.svg"
+                                alt="Play-video"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="relative image-video__card hover:shadow-none">
+                        <div
+                          class="relative z-30 overflow-hidden aspect-video image-video__product hover:shadow-none"
+                        >
+                          <!-- Video Element -->
+                          <video
+                            class="video-media size-full object-cover hidden"
+                            src="./assets/vid/vid-8.mp4"
+                            controls
+                          ></video>
+                          <!-- Thumbnail Image -->
+                          <img
+                            class="size-full object-cover video-thumbnail"
+                            src="./assets/img/img-thumbnail-media-video-2.jpg"
+                            alt="Thumbnail"
+                          />
+                          <!-- Play Button -->
+                          <div
+                            class="absolute z-30 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 shrink-0 bg-black-300/60 size-12 lg:size-16 rounded-full overflow-hidden p-[7px] secondary-hover"
+                          >
+                            <button
+                              class="videoPlay-btn relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                            >
+                              <img
+                                class="size-4 lg:size-auto ml-1"
+                                src="./assets/svg/video-play.svg"
+                                alt="Play-video"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="relative image-video__card hover:shadow-none">
+                        <div
+                          class="relative z-30 overflow-hidden aspect-video image-video__product hover:shadow-none"
+                        >
+                          <!-- Video Element -->
+                          <video
+                            class="video-media size-full object-cover hidden"
+                            src="./assets/vid/vid-5.mp4"
+                            controls
+                          ></video>
+                          <!-- Thumbnail Image -->
+                          <img
+                            class="size-full object-cover video-thumbnail"
+                            src="./assets/img/img-thumbnail-media-video-3.jpg"
+                            alt="Thumbnail"
+                          />
+                          <!-- Play Button -->
+                          <div
+                            class="absolute z-30 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 shrink-0 bg-black-300/60 size-12 lg:size-16 rounded-full overflow-hidden p-[7px] secondary-hover"
+                          >
+                            <button
+                              class="videoPlay-btn relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                            >
+                              <img
+                                class="size-4 lg:size-auto ml-1"
+                                src="./assets/svg/video-play.svg"
+                                alt="Play-video"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="relative image-video__card hover:shadow-none">
+                        <div
+                          class="relative z-30 overflow-hidden aspect-video image-video__product hover:shadow-none"
+                        >
+                          <!-- Video Element -->
+                          <video
+                            class="video-media size-full object-cover hidden"
+                            src="./assets/vid/vid-4.mp4"
+                            controls
+                          ></video>
+                          <!-- Thumbnail Image -->
+                          <img
+                            class="size-full object-cover video-thumbnail"
+                            src="./assets/img/img-thumbnail-media-video-4.jpg"
+                            alt="Thumbnail"
+                          />
+                          <!-- Play Button -->
+                          <div
+                            class="absolute z-30 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 shrink-0 bg-black-300/60 size-12 lg:size-16 rounded-full overflow-hidden p-[7px] secondary-hover"
+                          >
+                            <button
+                              class="videoPlay-btn relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                            >
+                              <img
+                                class="size-4 lg:size-auto ml-1"
+                                src="./assets/svg/video-play.svg"
+                                alt="Play-video"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="relative image-video__card hover:shadow-none">
+                        <div
+                          class="relative z-30 overflow-hidden aspect-video image-video__product hover:shadow-none"
+                        >
+                          <!-- Video Element -->
+                          <video
+                            class="video-media size-full object-cover hidden"
+                            src="./assets/vid/vid-6.mp4"
+                            controls
+                          ></video>
+                          <!-- Thumbnail Image -->
+                          <img
+                            class="size-full object-cover video-thumbnail"
+                            src="./assets/img/img-thumbnail-media-video-5.jpg"
+                            alt="Thumbnail"
+                          />
+                          <!-- Play Button -->
+                          <div
+                            class="absolute z-30 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 shrink-0 bg-black-300/60 size-12 lg:size-16 rounded-full overflow-hidden p-[7px] secondary-hover"
+                          >
+                            <button
+                              class="videoPlay-btn relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                            >
+                              <img
+                                class="size-4 lg:size-auto ml-1"
+                                src="./assets/svg/video-play.svg"
+                                alt="Play-video"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="relative image-video__card hover:shadow-none">
+                        <div
+                          class="relative z-30 overflow-hidden aspect-video image-video__product hover:shadow-none"
+                        >
+                          <!-- Video Element -->
+                          <video
+                            class="video-media size-full object-cover hidden"
+                            src="./assets/vid/vid-3.mp4"
+                            controls
+                          ></video>
+                          <!-- Thumbnail Image -->
+                          <img
+                            class="size-full object-cover video-thumbnail"
+                            src="./assets/img/img-thumbnail-media-video-6.jpg"
+                            alt="Thumbnail"
+                          />
+                          <!-- Play Button -->
+                          <div
+                            class="absolute z-30 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 shrink-0 bg-black-300/60 size-12 lg:size-16 rounded-full overflow-hidden p-[7px] secondary-hover"
+                          >
+                            <button
+                              class="videoPlay-btn relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                            >
+                              <img
+                                class="size-4 lg:size-auto ml-1"
+                                src="./assets/svg/video-play.svg"
+                                alt="Play-video"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="relative image-video__card hover:shadow-none">
+                        <div
+                          class="relative z-30 overflow-hidden aspect-video image-video__product hover:shadow-none"
+                        >
+                          <!-- Video Element -->
+                          <video
+                            class="video-media size-full object-cover hidden"
+                            src="./assets/vid/vid-2.mp4"
+                            controls
+                          ></video>
+                          <!-- Thumbnail Image -->
+                          <img
+                            class="size-full object-cover video-thumbnail"
+                            src="./assets/img/img-thumbnail-media-video-7.jpg"
+                            alt="Thumbnail"
+                          />
+                          <!-- Play Button -->
+                          <div
+                            class="absolute z-30 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 shrink-0 bg-black-300/60 size-12 lg:size-16 rounded-full overflow-hidden p-[7px] secondary-hover"
+                          >
+                            <button
+                              class="videoPlay-btn relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                            >
+                              <img
+                                class="size-4 lg:size-auto ml-1"
+                                src="./assets/svg/video-play.svg"
+                                alt="Play-video"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="relative image-video__card hover:shadow-none">
+                        <div
+                          class="relative z-30 overflow-hidden aspect-video image-video__product hover:shadow-none"
+                        >
+                          <!-- Video Element -->
+                          <video
+                            class="video-media size-full object-cover hidden"
+                            src="./assets/vid/vid-1.mp4"
+                            controls
+                          ></video>
+                          <!-- Thumbnail Image -->
+                          <img
+                            class="size-full object-cover video-thumbnail"
+                            src="./assets/img/img-thumbnail-media-video-8.jpg"
+                            alt="Thumbnail"
+                          />
+                          <!-- Play Button -->
+                          <div
+                            class="absolute z-30 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 shrink-0 bg-black-300/60 size-12 lg:size-16 rounded-full overflow-hidden p-[7px] secondary-hover"
+                          >
+                            <button
+                              class="videoPlay-btn relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                            >
+                              <img
+                                class="size-4 lg:size-auto ml-1"
+                                src="./assets/svg/video-play.svg"
+                                alt="Play-video"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Custom Prev/Next Navigation -->
+
+                <!-- Prev -->
+                <button
+                  class="videos-single-button-prev absolute left-12 lg:left-0 top-1/2 -translate-y-1/2 z-20 cursor-pointer !shrink-0 bg-black-300/60 size-10 sm:size-16 xl:size-[73px] rounded-full overflow-hidden p-[0.4375rem] transition duration-200 ease-in-out hover:shadow-custom -ml-12"
+                >
+                  <div
+                    class="border-glow relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                  >
+                    <img
+                      class="w-4 lg:w-5 h-5 lg:h-6 xl:w-[1.875rem] xl:h-9"
+                      src="./assets/svg/prev.svg"
+                      alt="Prev"
+                    />
+                  </div>
+                </button>
+
+                <!-- Next -->
+                <button
+                  class="videos-single-button-next absolute right-12 lg:right-0 top-1/2 -translate-y-1/2 z-20 cursor-pointer !shrink-0 bg-black-300/60 size-10 sm:size-16 xl:size-[73px] rounded-full overflow-hidden p-[0.4375rem] transition duration-200 ease-in-out hover:shadow-custom -mr-12"
+                >
+                  <div
+                    class="border-glow relative flex items-center justify-center size-full border border-active-menu rounded-full"
+                  >
+                    <img
+                      class="w-4 lg:w-5 h-5 sm:h-6 lg:h-8 xl:w-[1.875rem] xl:h-9 rotate-180"
+                      src="./assets/svg/prev.svg"
+                      alt="Prev"
+                    />
+                  </div>
+                </button>
+
+                <!-- Pagination Image Slider Single -->
+                <p
+                  class="videos-single-pagination w-fit absolute left-1/2 -translate-x-1/2 -bottom-6 z-20 flex items-center justify-center bg-black/70 rounded-full font-display font-bold text-[2rem] 2xl:text-[3.125rem] text-white leading-[100%] -mt-4 px-10 py-1"
+                >
+                  1/1
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="bg-black-200 pt-[3.3125rem] md:pt-20 xl:pt-[6.25rem] pb-16 md:pb-24 xl:pb-36"
+    >
+      <div
+        class="max-w-base flex flex-col lg:flex-row items-center lg:items-start gap-x-5 gap-y-10 justify-between mx-auto px-3.5 lg:px-6"
+      >
+        <div>
+          <img
+            class="h-10 md:h-16 xl:h-20"
+            src="./assets/svg/bottom_logo.svg"
+            alt=""
+          />
+          <p
+            class="hidden lg:block font-manrope text-[#484848] text-3xl/[2.5063rem] mt-8"
+          >
+            All rights reserved
+          </p>
+        </div>
+        <div
+          class="text-center lg:text-left max-w-[28.125rem] xl:max-w-[31.75rem] flex flex-col lg:flex-row flex-wrap items-center lg:items-start gap-x-16 gap-y-7 2xl:gap-y-12 text-[#8C8C8C]"
+        >
+          <a
+            class="text-2xl xl:text-[2rem]/[2.8rem] transition duration-200 hover:opacity-75"
+            href="https://www.pilistarship.com/termsOfService.html"
+          >
+            Terms of Service
+          </a>
+          <a
+            class="text-2xl xl:text-[2rem]/[2.8rem] transition duration-200 hover:opacity-75"
+            href="https://www.pilistarship.com/privacyPolicy.html"
+          >
+            Privacy Policy
+          </a>
+          <a
+            class="text-2xl xl:text-[2rem]/[2.8rem] transition duration-200 hover:opacity-75"
+            href="https://pilistarsip.com"
+          >
+            About Us
+          </a>
+          <!-- <a
+            class="text-2xl xl:text-[2rem]/[2.8rem] transition duration-200 hover:opacity-75"
+            href="mailto:example@email.com"
+          >
+            Contact Us
+          </a> -->
+        </div>
+        <p
+          class="block lg:hidden font-manrope text-[#484848] text-xl/[1.6675rem] mt-2.5"
+        >
+          All rights reserved
+        </p>
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Scripts -->
+    <script src="./js/api.js" type="module"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
