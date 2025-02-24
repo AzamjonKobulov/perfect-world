@@ -510,7 +510,6 @@ video {
 }
 
 html{
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -3074,10 +3073,6 @@ body{
     margin-bottom: 0px;
   }
 
-  .sm\:mt-96{
-    margin-top: 24rem;
-  }
-
   .sm\:block{
     display: block;
   }
@@ -3173,10 +3168,6 @@ body{
 
   .sm\:pt-\[5\%\]{
     padding-top: 5%;
-  }
-
-  .sm\:pt-96{
-    padding-top: 24rem;
   }
 
   .sm\:text-lg{
@@ -3467,10 +3458,6 @@ body{
 
   .lg\:mt-\[4\.375rem\]{
     margin-top: 4.375rem;
-  }
-
-  .lg\:mt-20{
-    margin-top: 5rem;
   }
 
   .lg\:block{

@@ -6,7 +6,7 @@
 
 @layer base {
   html {
-    @apply scroll-smooth overflow-x-hidden;
+    @apply scroll-smooth;
   }
 
   body {
