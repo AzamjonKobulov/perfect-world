@@ -803,12 +803,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const nextButton = document.querySelector(".info-modal-close");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const nextButton = document.querySelector(".info-modal-close");
 
-  nextButton.addEventListener("click", (e) => {
-    e.preventDefault();
+//   nextButton.addEventListener("click", (e) => {
+//     e.preventDefault();
 
-    window.location.href = "/store.html";
-  });
-});
+//     window.location.href = "/store.html";
+//   });
+// });
