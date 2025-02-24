@@ -689,13 +689,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const target = e.target.closest("li");
       if (!target) return;
 
-      // Remove 'text-black' class from previously selected item
+      // Remove 'text-white' class from previously selected item
       list.querySelectorAll("li").forEach((item) => {
         item.classList.remove("text-white");
       });
 
-      // Update label and apply styles
+      // Update label text and styling
       label.textContent = target.dataset.value;
+      label.classList.remove("text-white/60"); // Remove previous opacity class
+      label.classList.add("text-white"); // Ensure the text is fully white
       target.classList.add("text-white");
 
       // Hide dropdown
