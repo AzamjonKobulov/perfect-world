@@ -6,7 +6,7 @@
 
 @layer base {
   html {
-    @apply scroll-smooth;
+    @apply scroll-smooth overflow-x-hidden;
   }
 
   body {
@@ -76,8 +76,8 @@
   @apply transition duration-200 ease-in-out hover:border-white;
 }
 
-.register-btn::after,
-.register-btn::before {
+.btn-dots::after,
+.btn-dots::before {
   content: "";
   @apply relative z-10 size-1.5 rotate-45 bg-active-menu;
 }
