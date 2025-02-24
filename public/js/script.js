@@ -625,35 +625,45 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const topupModal = document.querySelector(".topup-modal");
-const infoModal = document.querySelector(".info-modal");
-const topupModalOpen = document.querySelectorAll(".topup-modal-open");
-const topupModalClose = document.querySelectorAll(".topup-modal-close");
-const infoModalOpen = document.querySelectorAll(".info-modal-open");
-const infoModalClose = document.querySelectorAll(".info-modal-close");
+document.addEventListener("DOMContentLoaded", () => {
+  const topupModal = document.querySelector(".topup-modal");
+  const infoModal = document.querySelector(".info-modal");
 
-topupModalOpen.forEach((button) => {
-  button.addEventListener("click", () => {
-    topupModal.classList.remove("hidden");
+  if (!topupModal || !infoModal) return;
+
+  const toggleModal = (modal, show) => {
+    if (modal) {
+      modal.classList.toggle("hidden", !show);
+    }
+  };
+
+  document.querySelectorAll(".topup-modal-open").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      toggleModal(topupModal, true);
+    });
   });
-});
 
-topupModalClose.forEach((button) => {
-  button.addEventListener("click", () => {
-    topupModal.classList.add("hidden");
+  document.querySelectorAll(".topup-modal-close").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      toggleModal(topupModal, false);
+    });
   });
-});
 
-infoModalOpen.forEach((button) => {
-  button.addEventListener("click", () => {
-    topupModal.classList.add("hidden");
-    infoModal.classList.remove("hidden");
+  document.querySelectorAll(".info-modal-open").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      toggleModal(topupModal, false);
+      toggleModal(infoModal, true);
+    });
   });
-});
 
-infoModalClose.forEach((button) => {
-  button.addEventListener("click", () => {
-    infoModal.classList.add("hidden");
+  document.querySelectorAll(".info-modal-close").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      toggleModal(infoModal, false);
+    });
   });
 });
 
