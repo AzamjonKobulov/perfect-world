@@ -624,3 +624,81 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.target === modal) closeVideoModal();
   });
 });
+
+const topupModal = document.querySelector(".topup-modal");
+const infoModal = document.querySelector(".info-modal");
+const topupModalOpen = document.querySelectorAll(".topup-modal-open");
+const topupModalClose = document.querySelectorAll(".topup-modal-close");
+const infoModalOpen = document.querySelectorAll(".info-modal-open");
+const infoModalClose = document.querySelectorAll(".info-modal-close");
+
+topupModalOpen.forEach((button) => {
+  button.addEventListener("click", () => {
+    topupModal.classList.remove("hidden");
+  });
+});
+
+topupModalClose.forEach((button) => {
+  button.addEventListener("click", () => {
+    topupModal.classList.add("hidden");
+  });
+});
+
+infoModalOpen.forEach((button) => {
+  button.addEventListener("click", () => {
+    topupModal.classList.add("hidden");
+    infoModal.classList.remove("hidden");
+  });
+});
+
+infoModalClose.forEach((button) => {
+  button.addEventListener("click", () => {
+    infoModal.classList.add("hidden");
+  });
+});
+
+// Initialize select functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const selects = document.querySelectorAll(".select");
+
+  selects.forEach((select) => {
+    const button = select.querySelector(".select-button");
+    const list = select.querySelector(".select-list");
+    const icon = select.querySelector(".select-icon");
+    const label = select.querySelector(".select-label");
+
+    // Toggle select
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      list.classList.toggle("hidden");
+      icon.classList.toggle("rotate-180");
+    });
+
+    // Select option
+    list.addEventListener("click", (e) => {
+      const target = e.target.closest("li");
+      if (!target) return;
+
+      // Remove 'text-black' class from previously selected item
+      list.querySelectorAll("li").forEach((item) => {
+        item.classList.remove("text-white");
+      });
+
+      // Update label and apply styles
+      label.textContent = target.dataset.value;
+      target.classList.add("text-white");
+
+      // Hide dropdown
+      list.classList.add("hidden");
+      icon.classList.remove("rotate-180");
+    });
+
+    // Close select when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!select.contains(e.target)) {
+        list.classList.add("hidden");
+        icon.classList.remove("rotate-180");
+      }
+    });
+  });
+});
