@@ -689,18 +689,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const target = e.target.closest("li");
       if (!target) return;
 
-      // Remove 'text-white' class from previously selected item
       list.querySelectorAll("li").forEach((item) => {
         item.classList.remove("text-white");
       });
 
-      // Update label text and styling
       label.textContent = target.dataset.value;
-      label.classList.remove("text-white/60"); // Remove previous opacity class
-      label.classList.add("text-white"); // Ensure the text is fully white
+      label.classList.remove("text-white/60");
+      label.classList.add("text-white");
       target.classList.add("text-white");
 
-      // Hide dropdown
       list.classList.add("hidden");
       icon.classList.remove("rotate-180");
     });
@@ -712,5 +709,106 @@ document.addEventListener("DOMContentLoaded", () => {
         icon.classList.remove("rotate-180");
       }
     });
+  });
+
+  // Open modal and copy data
+  const openModalButton = document.querySelector(".info-modal-open");
+  const modal = document.querySelector(".info-modal");
+  const serverName = document.querySelector(".select-label");
+  const userIdInput = document.getElementById("userIdInput");
+  const characterIdInput = document.getElementById("characterIdInput");
+
+  const modalServerName = document.querySelector("#modalServerName");
+  const modalUserId = document.querySelector("#modalUserId");
+  const modalCharacterId = document.querySelector("#modalCharacterId");
+
+  openModalButton.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // Сохраняем данные в localStorage
+    localStorage.setItem("serverName", serverName.textContent);
+    localStorage.setItem("userId", userIdInput.value);
+    localStorage.setItem("characterId", characterIdInput.value);
+
+    console.log("Данные сохранены в localStorage:");
+    console.log("Сервер:", serverName.textContent);
+    console.log("ID Пользователя:", userIdInput.value);
+    console.log("ID Персонажа:", characterIdInput.value);
+
+    modalServerName.textContent = serverName.textContent;
+    modalUserId.textContent = userIdInput.value;
+    modalCharacterId.textContent = characterIdInput.value;
+
+    // Показываем модальное окно
+    modal.classList.remove("hidden");
+  });
+
+  // Close modal
+  const closeModalButtons = document.querySelectorAll(".info-modal-close");
+  closeModalButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Страница загружена, скрипт выполняется.");
+
+  // Получаем данные из localStorage
+  const serverName = localStorage.getItem("serverName");
+  const userId = localStorage.getItem("userId");
+  const characterId = localStorage.getItem("characterId");
+
+  const serverNameMobile = document.querySelector(
+    ".text-white\\/65 div:nth-child(1) .block.sm\\:hidden"
+  );
+  const userIdMobile = document.querySelector(
+    ".text-white\\/65 div:nth-child(2) .block.sm\\:hidden"
+  );
+  const characterIdMobile = document.querySelector(
+    ".text-white\\/65 div:nth-child(3) .block.sm\\:hidden"
+  );
+
+  const serverNameDesktop = document.querySelector(
+    ".hidden.sm\\:block p:nth-child(1)"
+  );
+  const userIdDesktop = document.querySelector(
+    ".hidden.sm\\:block p:nth-child(2)"
+  );
+  const characterIdDesktop = document.querySelector(
+    ".hidden.sm\\:block p:nth-child(3)"
+  );
+
+  if (serverName && userId && characterId) {
+    console.log("Данные найдены, вставляем в блоки.");
+
+    serverNameMobile.textContent = serverName;
+    userIdMobile.textContent = userId;
+    characterIdMobile.textContent = characterId;
+
+    serverNameDesktop.textContent = serverName;
+    userIdDesktop.textContent = userId;
+    characterIdDesktop.textContent = characterId;
+  } else {
+    console.log("Данные не найдены в localStorage.");
+
+    serverNameMobile.textContent = "Данные не найдены";
+    userIdMobile.textContent = "Данные не найдены";
+    characterIdMobile.textContent = "Данные не найдены";
+
+    serverNameDesktop.textContent = "Данные не найдены";
+    userIdDesktop.textContent = "Данные не найдены";
+    characterIdDesktop.textContent = "Данные не найдены";
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const nextButton = document.querySelector(".info-modal-close");
+
+  nextButton.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    window.location.href = "/store.html";
   });
 });

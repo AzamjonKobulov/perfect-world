@@ -1397,12 +1397,6 @@ body{
 .rounded-lg{
   border-radius: 0.5rem;
 }
-.rounded-2xl{
-  border-radius: 1rem;
-}
-.rounded-3xl{
-  border-radius: 1.5rem;
-}
 .rounded-xl{
   border-radius: 0.75rem;
 }
@@ -1619,6 +1613,10 @@ body{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
+.px-2\.5{
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
 .px-3\.5{
   padding-left: 0.875rem;
   padding-right: 0.875rem;
@@ -1686,10 +1684,6 @@ body{
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-.px-2\.5{
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
 }
 .\!pt-6{
   padding-top: 1.5rem !important;
@@ -1932,14 +1926,6 @@ body{
 }
 .text-white\/65{
   color: rgb(255 255 255 / 0.65);
-}
-.text-black{
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
-}
-.\!text-white{
-  --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
 .underline{
   text-decoration-line: underline;
@@ -3068,14 +3054,14 @@ body{
     padding-right: 2rem;
   }
 
-  .xs\:py-1\.5{
-    padding-top: 0.375rem;
-    padding-bottom: 0.375rem;
-  }
-
   .xs\:py-1{
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
+  }
+
+  .xs\:py-1\.5{
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
   }
 
   .xs\:pt-\[6\%\]{
@@ -3752,12 +3738,12 @@ body{
     margin-bottom: calc(2.25rem * var(--tw-space-y-reverse));
   }
 
-  .lg\:rounded-full{
-    border-radius: 9999px;
-  }
-
   .lg\:rounded-2xl{
     border-radius: 1rem;
+  }
+
+  .lg\:rounded-full{
+    border-radius: 9999px;
   }
 
   .lg\:px-10{
