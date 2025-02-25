@@ -4,22 +4,23 @@ const mobileMenu = document.querySelector(".mobile-menu");
 const menuIcon = document.querySelector(".menu-icon");
 const exitIcon = document.querySelector(".exit-icon");
 
-menuBtn.addEventListener("click", () => {
+menuBtn.addEventListener("click", toggleMenu);
+
+function toggleMenu() {
   mobileMenu.classList.toggle("translate-x-full");
   mobileMenu.classList.toggle("translate-x-0");
 
-  if (exitIcon.classList.contains("hidden")) {
-    exitIcon.classList.remove("hidden");
-    exitIcon.classList.add("block");
+  exitIcon.classList.toggle("hidden");
+  exitIcon.classList.toggle("block");
 
-    menuIcon.classList.add("hidden");
-    menuIcon.classList.remove("block");
-  } else {
-    exitIcon.classList.add("hidden");
-    exitIcon.classList.remove("block");
+  menuIcon.classList.toggle("hidden");
+  menuIcon.classList.toggle("block");
+}
 
-    menuIcon.classList.remove("hidden");
-    menuIcon.classList.add("block");
+// Close menu when clicking on <li>, <a>, or <button> inside the menu
+mobileMenu.addEventListener("click", (event) => {
+  if (event.target.closest("li, a, button")) {
+    toggleMenu();
   }
 });
 
@@ -802,13 +803,3 @@ document.addEventListener("DOMContentLoaded", () => {
     characterIdDesktop.textContent = "Данные не найдены";
   }
 });
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const nextButton = document.querySelector(".info-modal-close");
-
-//   nextButton.addEventListener("click", (e) => {
-//     e.preventDefault();
-
-//     window.location.href = "/store.html";
-//   });
-// });
