@@ -370,34 +370,13 @@ const swiperImages = initializeSwiper(
   ".images-button-next",
   ".images-button-prev"
 );
+
 const swiperVideos = initializeSwiper(
   ".videos-swiper",
   ".videos-pagination",
   ".videos-button-next",
   ".videos-button-prev"
 );
-
-// Function to update pagination dynamically for any Swiper instance
-function updatePagination(swiper, paginationClass) {
-  if (!swiper || !paginationClass) return;
-
-  const totalSlides = swiper.params.loop
-    ? swiper.originalSlides.length
-    : swiper.slides.length;
-  const currentSlide = swiper.params.loop
-    ? swiper.realIndex + 1
-    : swiper.activeIndex + 1;
-
-  // Get the pagination element
-  const paginationElement = document.querySelector(paginationClass);
-  if (!paginationElement) {
-    console.error(`Pagination element not found: ${paginationClass}`);
-    return;
-  }
-
-  // Update pagination text dynamically
-  paginationElement.innerHTML = `${currentSlide}/${totalSlides}`;
-}
 
 // Function to initialize Swiper with pagination updates
 function initSwiper(selector, paginationSelector, nextBtn, prevBtn) {
@@ -440,7 +419,7 @@ const swiperVideosSingle = initSwiper(
 );
 
 // Function to update pagination dynamically
-function updateSinglePagination(swiper, paginationClass) {
+function updatePagination(swiper, paginationClass) {
   const totalSlides = swiper.params.loop
     ? swiper.originalSlides.length
     : swiper.slides.length;
@@ -458,6 +437,74 @@ function updateSinglePagination(swiper, paginationClass) {
   // Update pagination text
   paginationElement.innerHTML = `${currentSlide}/${totalSlides}`;
 }
+
+// Function to handle image/video slide click
+function handleSlideClick(swiper, modalSelector, singleSwiper) {
+  const slides = document.querySelectorAll(`${swiper} .swiper-slide`);
+  const modal = document.querySelector(modalSelector);
+
+  slides.forEach((slide, index) => {
+    slide.addEventListener("click", () => {
+      // Open the modal
+      modal.classList.remove("translate-y-full");
+      modal.classList.add("translate-y-0");
+
+      // Update the single Swiper to show the clicked slide
+      singleSwiper.slideTo(index);
+
+      // Update pagination
+      updatePagination(
+        singleSwiper,
+        `${singleSwiper.selector} .images-single-pagination`
+      );
+    });
+  });
+}
+
+// Add click handlers for images and videos
+handleSlideClick(
+  ".images-swiper",
+  ".image-slider-modal-overlay",
+  swiperImagesSingle
+);
+handleSlideClick(
+  ".videos-swiper",
+  ".video-slider-modal-overlay",
+  swiperVideosSingle
+);
+
+// Function to close the modal
+function closeModal(modalSelector, closeButtonSelector, singleSwiper) {
+  const modal = document.querySelector(modalSelector);
+  const closeButton = document.querySelector(closeButtonSelector);
+
+  if (!closeButton) {
+    console.error(`Close button not found: ${closeButtonSelector}`);
+    return;
+  }
+
+  closeButton.addEventListener("click", () => {
+    // Close the modal
+    modal.classList.remove("translate-y-0");
+    modal.classList.add("translate-y-full");
+
+    // Reset the single Swiper to the first slide
+    singleSwiper.slideTo(0);
+  });
+}
+
+// Add close handlers for images and videos modals
+closeModal(
+  ".image-slider-modal-overlay",
+  ".image-slider-modal-overlay .image-slider-modal-close-btn",
+  swiperImagesSingle
+);
+
+closeModal(
+  ".video-slider-modal-overlay",
+  ".video-slider-modal-overlay .video-slider-modal-close-btn",
+  swiperVideosSingle
+);
 
 document.addEventListener("DOMContentLoaded", function () {
   const tabs = document.querySelectorAll("[data-tab]");
