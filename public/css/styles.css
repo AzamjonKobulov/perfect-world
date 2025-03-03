@@ -1147,6 +1147,9 @@ body{
 .max-w-48{
   max-width: 12rem;
 }
+.max-w-56{
+  max-width: 14rem;
+}
 .flex-1{
   flex: 1 1 0%;
 }
@@ -3279,6 +3282,12 @@ body{
 
   .sm\:gap-8{
     gap: 2rem;
+  }
+
+  .sm\:space-y-10 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
   }
 
   .sm\:pt-16{
